@@ -32,7 +32,7 @@ For developing and testing the performance and quality of LIBRA, three sets of p
       - 
       - 
       
-  - ####  Integration Neural Network 
+  - ####  Secondary Neural Network 
     - Details: 
       - 
       -  
