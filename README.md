@@ -1,5 +1,5 @@
 # Machine Translation between paired Single Cell Multi Omics Data
-This repository contains online data and LIBRA code to analyze and visualize Single-cell multiomics integration analysis and it's downstream analysis outputs. Metrics are also available for quantify outputs quality. 
+This repository contains online data and LIBRA code to analyze and visualize paired Single-cell multiomics integration analysis and it's downstream analysis outputs. Metrics are also available for quantify outputs quality. 
 
 For details, please visit https://www.biorxiv.org/content/10.1101/2021.01.27.428400v1.
 
