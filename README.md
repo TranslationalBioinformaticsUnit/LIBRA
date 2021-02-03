@@ -26,16 +26,9 @@ For developing and testing the performance and quality of LIBRA, three sets of p
   - library("Signac") 
 
 
-### LIBRA Workflow (Code folder):
-  - ####  Integration Neural Network 
-    - Details: 
-      - 
-      - 
-      
-  - ####  Secondary Neural Network 
-    - Details: 
-      - 
-      -  
+### LIBRA Workflow
+![alt text](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/F1_2.pdf)
+
   
   
   
