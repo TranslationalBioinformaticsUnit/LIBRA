@@ -19,10 +19,23 @@ For developing and testing the performance and quality of LIBRA, three sets of p
 Please install the following R libraries before using LIBRA: devtools, keras, stringr, scclusteval, Seurat, ggplot2, Signac, scater, gridExtra, ggpubr, biomaRt, scran, cowplot, Matrix, data.table, GenomeInfoDb, EnsDb.Hsapiens.v75, patchwork, rhdf5
 
 
-### LIBRA Workflow
+### LIBRA Workflow:
 ![workflow.png](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/workflow.png)
 
 
+### Usage:
+- Preprocessing
+  - Removing low quality features and cells
+    - Use "1_pre_analysis_Seurat3.R" under Code folder (or your own QC pipeline)
+    > **Preprocessing: Feel free to add additional filtering to proposed ones as doublets removal specific libraries pipelines** 
+    
+- Analysis
+  - Normalize and visualize with Seurat for independet samples (or other analysis pipeline that generates at least normalized matrix as output). If more than one sample is present for a given omic first integrate them as usual pipelines requires.
+    - Use "2_analysis_Seurat3.R" under Code folder (or your own Normalization pipeline)
+    > **Normalization method: Different normalization methods can enhance different LIBRA applications shuch as integration or prediction.** 
 
-
-  
+- LIBRA 
+  - Use analysis_output.RData as input for LIBRA neural network
+    - Use "LIBRA.R" under Code folder for networks training
+    - Use "Metrics_LIBRA.R" for additional quality metrix computation
+    > **Outputs: Different outputs generated during the training will be stored in the working directory.**
