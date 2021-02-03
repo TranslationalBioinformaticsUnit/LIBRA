@@ -16,15 +16,8 @@ For developing and testing the performance and quality of LIBRA, three sets of p
 
 
 ### Required libraries:
-  - library(devtools)
-  - library("keras")
-  - library("stringr")
-  - library("scclusteval")
-  - library("keras")
-  - library("Seurat")
-  - library("ggplot2")
-  - library("Signac") 
-  - library("keras")
+Please install the following R libraries before using LIBRA: devtools, keras, stringr, scclusteval, Seurat, ggplot2, Signac, scater, gridExtra, ggpubr, biomaRt, scran, cowplot, Matrix, data.table, GenomeInfoDb, EnsDb.Hsapiens.v75, patchwork, rhdf5
+
 
 ### LIBRA Workflow
 ![workflow.png](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/workflow.png)
