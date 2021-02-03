@@ -27,7 +27,8 @@ For developing and testing the performance and quality of LIBRA, three sets of p
 
 
 ### LIBRA Workflow
-![F1_2.jpg](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/F1_2.jpg)
+![workflow.png](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/workflow.png)
+
 
 
 
