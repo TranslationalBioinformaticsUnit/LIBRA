@@ -25,7 +25,7 @@ tensorflow::tf$compat$v1$disable_eager_execution()
 #INPUT DATA
 #Seurat slots required may change base on omics used, in this example we make use of scRNA and scATAC for "pbmc" dataset
 setwd("/your_path")
-load("your_standard_analysis_Seurat_output.RData")
+load("your_standard_analysis_Seurat_3_output.RData")
 
 DefaultAssay(pbmc) <- 'RNA'
 rna = t(data.frame(pbmc@assays$RNA@data))
