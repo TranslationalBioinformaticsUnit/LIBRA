@@ -8,7 +8,7 @@ For details, please visit https://www.biorxiv.org/content/10.1101/2021.01.27.428
 
 
 ### Datasets:
-For developing and testing the performance and quality of LIBRA, three sets of paired multimodality datasets were used. The original datasets are stored under "Data" folder.
+For developing and testing the performance and quality of LIBRA, three sets of paired multimodality datasets were used.
 
 - DataSet1, SNARE-seq1: GSE126074. SNARE-seq is a droplet-based single nucleus protocol which allows the simultaneous profiling of mRNA expression and chromatin accessibility. DataSet1 contains wild type Mouse brain cortex cells from neonatal (5.081 nuclei) and adult (10.309 nuclei) mouse brain for both paired scRNA and scATAC profiles.
 - DataSet2, PBMC2: 10X Genomics website repository. 10X Genomics "Multiome ATAC + Gene Expression" protocol. The data set consists of 10.412 Human PBMC cells from a healthy donor without granulocytes removed by cell sorting.
