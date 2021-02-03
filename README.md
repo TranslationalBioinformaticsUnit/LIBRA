@@ -24,7 +24,7 @@ For developing and testing the performance and quality of LIBRA, three sets of p
   - library("Seurat")
   - library("ggplot2")
   - library("Signac") 
-
+  - library("keras")
 
 ### LIBRA Workflow
 ![workflow.png](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/workflow.png)
