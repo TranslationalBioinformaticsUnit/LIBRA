@@ -27,8 +27,8 @@ For validating LIBRA performance we compared it agains other non-publicly (Seura
 All test have been executed on a CPU based server (Intel Corporation Xeon E3-1200 v3 Processor) with reasonable times.
 
 ### Required libraries:
-Please install the following R libraries before using LIBRA: devtools, keras, stringr, scclusteval, Seurat3/4, ggplot2, Signac, scater, gridExtra, ggpubr, biomaRt, scran, cowplot, Matrix, data.table, GenomeInfoDb, EnsDb.Hsapiens.v75, patchwork, rhdf5 and MOFA2.
-Please install the following Python libraries: scanpy, scvi and anndata.
+-Please install the following R libraries before using LIBRA: devtools, keras, stringr, scclusteval, Seurat3/4, ggplot2, Signac, scater, gridExtra, ggpubr, biomaRt, scran, cowplot, Matrix, data.table, GenomeInfoDb, EnsDb.Hsapiens.v75, patchwork, rhdf5 and MOFA2.  
+-Please install the following Python libraries: scanpy, scvi and anndata.
 
 
 ### LIBRA visual workflow:
