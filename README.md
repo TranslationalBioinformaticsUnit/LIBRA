@@ -18,16 +18,17 @@ For developing and testing the performance and quality of LIBRA, six paired mult
 - DataSet6, scNMT-seq: GSE109262. Data modalities: single-cell RNA-seq, single-cell ATAC-seq and single-cell DNA Methylation.
 
 ### Tools against which it was compared
-For validating LIBRA performance we compared it agains other non-publicly (Seurat 4) and already publicly (Seurat3, MOFA+, totalVI and BABEL) tools that performs similar tasks.
--Integration performance compred to: Seurat3/4, MOFA+, totalVI and BABEL.
+For validating LIBRA performance we compared it agains other non-publicly (Seurat 4) and already publicly (Seurat3, MOFA+, totalVI and BABEL) tools that performs similar tasks. 
+
+-Integration performance compred to: Seurat3/4, MOFA+, totalVI and BABEL.  
 -Prediction performance compared to: BABEL.
+
+### Required time to run the tool:
+All test have been executed on a CPU based server with reasonable times.
 
 ### Required libraries:
 Please install the following R libraries before using LIBRA: devtools, keras, stringr, scclusteval, Seurat3/4, ggplot2, Signac, scater, gridExtra, ggpubr, biomaRt, scran, cowplot, Matrix, data.table, GenomeInfoDb, EnsDb.Hsapiens.v75, patchwork, rhdf5 and MOFA2.
 Please install the following Python libraries: scanpy, scvi and anndata.
-
-### Required time to run the tool:
-All test have been executed on a CPU based server with reasonable times.
 
 
 ### LIBRA visual workflow:
