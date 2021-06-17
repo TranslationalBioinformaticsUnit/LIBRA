@@ -1,0 +1,64 @@
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## LIBRA Example 
+
+Compiled: June 15, 2021.
+
+PPJI metric: Clustering preservation computation between LIBRA integrated subspace clustering and original omics RNA/ATAC clustering.
+
+
+```{r prepare the env}
+#options(warn=-1)
+
+###########################
+#Prepare enviroment
+set.seed(1234567)
+options(stringsAsFactors = FALSE)
+
+#Commented resourcess will be required for training the model
+#library("keras")
+#K <- keras::backend()
+#tensorflow::tf$compat$v1$disable_eager_execution()
+#print("backend mounted")
+
+#Extra resources for manage data, clustering and visualization
+library("Seurat")
+library("scclusteval")
+library("ggplot2")
+
+print("Requirements loaded")
+gc()
+```
+
+Setting the workspace. Loading the output of the pre-trained model as well as pre-processed RNA and ATAC Seurat objects.
+
+```{r set working dir}
+setwd("/your_path")
+load("LIBRA_output.RData")
+print("Loaded LIBRA output")
+```
+
+Pairwise Jaccard distance between reference omic RNA (y-axis) clusters and integrated cluster obtain in LIBRA (x-axis)
+
+```{r PJI}
+jacard=PairWiseJaccardSetsHeatmap(rna_preprocessed@active.ident, LIBRA@active.ident,
+                           show_row_dend = F, show_column_dend = F,
+                           cluster_row = F, cluster_column =F)
+jacard
+```
+
+PPJI summarization for corresponding dataset
+
+```{r PPJI}
+ppji_score = c()
+jacard_distance_matrix = jacard@matrix
+is.na(jacard_distance_matrix) = jacard_distance_matrix==0
+jacard_distance_matrix = jacard_distance_matrix[,colSums(is.na(jacard_distance_matrix))<nrow(jacard_distance_matrix)]
+ppji_score = append(ppji_score, mean(apply(jacard_distance_matrix,1,sum, na.rm=TRUE)))
+print(ppji_score)
+```
+
+
+

@@ -1,0 +1,225 @@
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## LIBRA Example 
+
+Compiled: June 15, 2021.
+
+LIBRA can be use as an alernative to existing methods for paired multi-omics integration and prediction. Outputs can be use for regular downstream analysis such us markers identification, clusterig or visualization among others.
+
+For tutorial propouse we will load a pre-trained model from SNARE-seq: GSE126074. It contains paired profiling of mRNA expression and chromatin accessibility from adult Mouse brain cortex cells already preprocessed as expained in manuscript .
+
+
+```{r prepare the env}
+options(warn=-1)
+
+###########################
+#Prepare enviroment
+set.seed(1234567)
+options(stringsAsFactors = FALSE)
+
+#Commented resourcess will be required for training the model
+#library("keras")
+#K <- keras::backend()
+#tensorflow::tf$compat$v1$disable_eager_execution()
+#print("backend mounted")
+
+#Extra resources for manage data, clustering and visualization
+library("Seurat")
+library("ggplot2")
+
+print("Requirements loaded")
+gc()
+```
+
+Setting the workspace. Loading the output of the pre-trained model as well as pre-processed RNA and ATAC Seurat objects.
+
+```{r set working dir}
+setwd("/your_path")
+
+load("jupyter_notebook_data.RData")
+print("Loaded pre-trained model output and pre-processed RNA&ATAC Seurat objects")
+ls()
+```
+
+```{r data}
+#This object represents RNA pre-processed Seurat object
+rna_preprocessed
+
+#This object represents ATAC pre-processed Seurat object
+atac_preprocessed
+
+#This object represents LIBRA shared space generated after training.
+#Rows are the cells and columns are each of the LIBRA's middle layer componens obtained
+dim(libra_shared_space)
+libra_shared_space[1:10,1:10]
+
+#This object represents LIBRA predicted RNA data from trained LIBRA model
+dim(libra_prediction)
+libra_prediction[1:10,1:10]
+
+#x_train2 represents RNA original pre-processed data
+dim(x_train2)
+```
+
+In orther to train a new LIBRA model find attached code snippet where x_train is ATAC pre-processed data and x_train2 is RNA pre-processed data. If prediction want to be performed in the reverse order just change omics order but for integration we recomend to use x_train2 as RNA. Change validation_split=0 to validation_split=0.2 base on develop or deploy outcomes proposal.
+
+### Parameters
+```{r parameters, inlcude=FALSE, eval=FALSE}
+batch_size <- 7000L #Base on GPU/CPU usage RAM and time desired
+original_dim <- ncol(x_train)
+latent_dim <- 10 #10L
+epochs <- 1500L #1500L
+```
+
+### Model definition
+```{r model, inlcude=FALSE, eval=FALSE}
+model <- keras_model_sequential()
+model %>%
+layer_dense(units = 512, input_shape = ncol(x_train)) %>%
+layer_activation_leaky_relu() %>%
+layer_dropout(rate = 0.2) %>%
+layer_dense(units = 256, input_shape = ncol(x_train)) %>%
+layer_activation_leaky_relu() %>%
+layer_dropout(rate = 0.2) %>%
+layer_dense(units = latent_dim, name = "bottleneck") %>%
+layer_activation_leaky_relu() %>%
+layer_dropout(rate = 0.2) %>%
+layer_dense(units = 256) %>%
+layer_activation_leaky_relu() %>%
+layer_dropout(rate = 0.2) %>%
+layer_dense(units = 512) %>%
+layer_activation_leaky_relu() %>%
+layer_dense(units = ncol(x_train2), name = "output")
+model %>% compile(
+loss = "mean_squared_error",
+optimizer = optimizer_adam(),
+metrics = list("mean_squared_error")
+)
+```
+
+### Store model
+```{r store, inlcude=FALSE, eval=FALSE}
+checkpoint <- callback_model_checkpoint(
+monitor = "loss",
+filepath = paste0("LIBRA_model.hdf5"),
+save_best_only = TRUE,
+period = 1,
+verbose = 1
+)
+
+early_stopping <- callback_early_stopping(monitor = "loss", patience = 20)
+```
+
+### Model training
+```{r training, inlcude=FALSE, eval=FALSE}
+history_atac <- model %>% fit(
+x = x_train,
+y = x_train2,
+epochs = epochs,
+batch_size = batch_size,
+callbacks = list(checkpoint, early_stopping),
+validation_split = 0
+)
+```
+
+### Model outcomes: Shared space
+```{r shared space, inlcude=FALSE, eval=FALSE}
+layer_name = 'bottleneck'
+# TODO bug
+intermediate_layer_model <- keras_model(inputs = model 𝑖𝑛𝑝𝑢𝑡,𝑜𝑢𝑡𝑝𝑢𝑡𝑠=𝑔𝑒�𝑟(𝑚𝑜𝑑𝑒𝑙,𝑙𝑎𝑦𝑒𝑟𝑛𝑎𝑚𝑒) output)
+libra_shared_space <- predict(intermediate_layer_model, x_train)
+```
+
+### Set correct names
+```{r rownames, inlcude=FALSE, eval=FALSE}
+rownames(libra_shared_space) = rownames(x_train)
+```
+
+### Model outcomes: Prediction
+```{r outcome, inlcude=FALSE, eval=FALSE}
+layer_name = 'output'
+# TODO bug
+output_layer_model <- keras_model(inputs = model 𝑖𝑛𝑝𝑢𝑡,𝑜𝑢𝑡𝑝𝑢𝑡𝑠=𝑔𝑒𝑡𝑙𝑎𝑦𝑒𝑟(𝑚𝑜𝑑𝑒𝑙,𝑙𝑎𝑦𝑒𝑟𝑛𝑎𝑚𝑒) output)
+libra_prediction <- predict(output_layer_model, x_train)
+```
+
+### Set correct names
+```{r names, inlcude=FALSE, eval=FALSE}
+rownames(libra_prediction) = rownames(x_train2)
+colnames(libra_prediction) = colnames(x_train2)
+```
+Print original RNA(rna_preprocessed) and ATAC(atac_preprocessed) clustering computed.
+
+```{r plot1}
+DimPlot(rna_preprocessed, reduction = "umap", label = TRUE) + ggtitle('This is RNA data after pre-processing')
+DimPlot(atac_preprocessed, reduction = "umap", label = TRUE) + ggtitle('This is ATAC data after pre-processing')
+```
+
+Lets replace low dimensional space LDS from where clustering it's computed by seurat for our LIBRA's integrated space, in this way we can easily plot new clustering results over original projections within Seurat.
+```{r cluster_1}
+#Add computed shared components from LIBRA to Seurat
+rna_preprocessed_libras_base_clustering = rna_preprocessed
+rna_preprocessed_libras_base_clustering@reductions$pca@cell.embeddings = libra_shared_space[match(rownames(rna_preprocessed_libras_base_clustering@reductions$pca@cell.embeddings),rownames(libra_shared_space)),]
+rna_preprocessed_libras_base_clustering = FindNeighbors(object = rna_preprocessed_libras_base_clustering, reduction = "pca", dims = 1:10)
+rna_preprocessed_libras_base_clustering = FindClusters(object = rna_preprocessed_libras_base_clustering, resolution = 0.8, n.start = 1000)
+```
+
+We can plot new clustering results base on LIBRA components on original UMAP projections.
+```{r plot_2}
+DimPlot(rna_preprocessed_libras_base_clustering, reduction = "umap", label = TRUE) + ggtitle('This is RNA original projection clustered base on LIBRA')
+table(rna_preprocessed_libras_base_clustering@active.ident)
+```
+
+Same that generated in RNA but for ATAC.
+Performed this way for ensure that base on same graph, Louvain clustering it's enought stable for having an exact clustering. We strongly recomend to increase n.start from default value to a greater value, else small fluctuations will happen in clustering.
+
+```{r cluster_2}
+#Add computed shared components from LIBRA to Seurat
+atac_preprocessed_libras_base_clustering = atac_preprocessed
+atac_preprocessed_libras_base_clustering@graphs$ATAC_snn = rna_preprocessed_libras_base_clustering@graphs$RNA_snn
+atac_preprocessed_libras_base_clustering = FindClusters(object = atac_preprocessed_libras_base_clustering, resolution = 0.8, n.start = 1000)
+
+```
+
+```{r plot_3}
+DimPlot(atac_preprocessed_libras_base_clustering, reduction = "umap", label = TRUE)  + ggtitle('This is ATAC original projection clustered base on LIBRA')
+table(atac_preprocessed_libras_base_clustering@active.ident)
+```
+
+```{r table}
+table(rna_preprocessed_libras_base_clustering@active.ident[colnames(rna_preprocessed_libras_base_clustering)] == atac_preprocessed_libras_base_clustering@active.ident[colnames(rna_preprocessed_libras_base_clustering)])
+```
+
+If not worried about small fluctuations on Louvain clustering you can simply translate clustering vector from computed on RNA to ATAC:
+
+```{r libra}
+atac_preprocessed_libras_base_clustering@active.ident[colnames(rna_preprocessed_libras_base_clustering)] = rna_preprocessed_libras_base_clustering@active.ident[colnames(rna_preprocessed_libras_base_clustering)]
+table(rna_preprocessed_libras_base_clustering@active.ident[colnames(rna_preprocessed_libras_base_clustering)] == atac_preprocessed_libras_base_clustering@active.ident[colnames(rna_preprocessed_libras_base_clustering)])
+```
+
+Compute UMAP over already replace pca components with LIBRA ones. LIBRA shared space will be generated.
+
+```{r plot_4}
+LIBRA = RunUMAP(rna_preprocessed_libras_base_clustering, reduction = "pca", dims = 1:10)
+```
+
+```{r plot_5}
+DimPlot(LIBRA, reduction = "umap", label = TRUE) + ggtitle('This is LIBRA shared projection clustered base on LIBRA')
+```
+
+Compute cell correlation between original pre-processed RNA dataset (x_train2) and LIBRAS predicted RNA dataset (libra_prediction)
+
+```{r cell correlation}
+for (n in 0:max(as.numeric(LIBRA@meta.data$RNA_snn_res.0.8)-1)) {
+  cells_0=rownames(LIBRA@meta.data)[LIBRA@meta.data$RNA_snn_res.0.8 == n]
+  print(mean(diag(cor(t(libra_prediction)[,cells_0], t(x_train2)[,cells_0]))))
+}
+```
+
+```{r save image, inlcude=FALSE, eval=FALSE}
+save.image("LIBRA_output.RData")
+```
+
+
