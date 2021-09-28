@@ -2,7 +2,7 @@ pkgLoad <- function( packages = "favourites" ) {
 
     if( length( packages ) == 1L && packages == "favourites" ) {
         packages <- c( "keras", "stringr", "scclusteval", "Seurat",
-                       "ggplot2", "Signac", "scater", "gridExtra", "ggpubr",
+                       "ggplot2", "Signac", "scater", "gridExtra",
                        "biomaRt", "scran", "cowplot", "Matrix",
                        "data.table", "GenomeInfoDb", "EnsDb.Hsapiens.v75", "patchwork", "rhdf5",
                        "MOFA2", "Rcpp"

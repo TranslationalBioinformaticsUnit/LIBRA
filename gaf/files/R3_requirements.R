@@ -1,11 +1,11 @@
 pkgLoad <- function( packages = "favourites" ) {
 
     if( length( packages ) == 1L && packages == "favourites" ) {
-        packages <- c( "devtools","keras", "stringr", "scclusteval", "Seurat",
-                       "ggplot2", "Signac", "scater", "gridExtra", "ggpubr",
+        packages <- c( "keras", "stringr", "scclusteval", "Seurat",
+                       "ggplot2", "Signac", "scater", "gridExtra", 
                        "biomaRt", "scran", "cowplot", "Matrix",
                        "data.table", "GenomeInfoDb", "EnsDb.Hsapiens.v75", "patchwork", "rhdf5",
-                       "MOFA2", "Rcpp"
+                       "Rcpp"
         )
     }
 
@@ -24,11 +24,10 @@ pkgLoad <- function( packages = "favourites" ) {
     if( length( packagestoinstall_2 ) > 0L ) {
 	if (!requireNamespace("BiocManager", quietly = TRUE))
     	install.packages("BiocManager")
-	BiocManager::install(packagestoinstall_2 )	
+	BiocManager::install(packagestoinstall_2)	
     } else {
         print( "All requested packages from BIOCONDUCTOR already installed" )
     }
-
     for( package in packages ) {
         suppressPackageStartupMessages(
             library( package, character.only = TRUE, quietly = TRUE )
