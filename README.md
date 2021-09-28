@@ -38,7 +38,7 @@ scanpy_1.5.0, scvi_0.8.1 and anndata_0.7.5.
 
 
 ### LIBRA visual workflow:
-![workflow.png](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/workflow.png)
+![workflow.png](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/gaf/figures/workflow.png)
 
 ### LIBRA code workflow:
 Find in "Jupyter_notebook folder" two Jupyter files containing a general example pipeline from LIBRA as well as most relevant QC for measuring performance over integration and prediction outcomes.
