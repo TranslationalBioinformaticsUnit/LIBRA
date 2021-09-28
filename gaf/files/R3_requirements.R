@@ -11,8 +11,7 @@ pkgLoad <- function( packages = "favourites" ) {
 
     packagecheck <- match( packages, utils::installed.packages()[,1] )
 
-    packagestoinstall <- packages[ !is.na( packagecheck ) ]
-    packagestoinstall_2 <- packages[is.na( packagecheck ) ]
+    packagestoinstall <- packages[is.na( packagecheck ) ]
 
     if( length( packagestoinstall ) > 0L ) {
         utils::install.packages( packagestoinstall,
@@ -21,7 +20,7 @@ pkgLoad <- function( packages = "favourites" ) {
     } else {
         print( "All requested packages from CRAN already installed" )
     }
-    if( length( packagestoinstall_2 ) > 0L ) {
+    if( length( packagestoinstall ) > 0L ) {
 	if (!requireNamespace("BiocManager", quietly = TRUE))
     	install.packages("BiocManager")
 	BiocManager::install(packagestoinstall_2)	
