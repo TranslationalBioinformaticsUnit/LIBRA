@@ -1,9 +1,11 @@
-# Machine Translation between paired Single-Cell Multi-Omics Data
-This repository contains online data and LIBRA code to analyze and visualize paired Single-cell multi-omics integration analysis, and it's downstream analysis outputs. Metrics are also available for quantifying outputs quality. 
+# LIBRA
+*Machine Translation between paired Single-Cell Multi-Omics Data*
 
-LIBRA was develop in R but feel free to use "rpy2" Python library (https://rpy2.github.io/) for running LIBRA on R snippet through Python console otherwise if your preprocessing was performed using Python but you are interested in running libra in its R implementation you are able to move it to R by using "reticulate" package (https://rstudio.github.io/reticulate/).
-
-For details, please visit https://www.biorxiv.org/content/10.1101/2021.01.27.428400v1. (This link will be updated with most recent version asap) 
+This repository contains:
+- [Online data](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/data/) employed on LIBRA manuscript.
+- [Seurat code](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/R/) employed to analyze and visualize integration analysis performed by Seurat.
+- [LIBRA code](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/R/) to analyze and visualize paired Single-cell multi-omics integration and prediction analysis.
+- [LIBRA metrics](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/R/) are also available for quantifying outputs quality base on PPJI preservation measurement.
 
 ## Material of interest
 
@@ -58,3 +60,5 @@ Find in "Jupyter_notebook folder" two Jupyter files containing a general example
     - Use "LIBRA.R" under Code folder for networks training
     - Use "Metrics_LIBRA.R" for additional quality metrix computation
     > **Outputs: Different outputs generated during the training will be stored in the working directory.**
+
+LIBRA was develop in R but feel free to use "rpy2" Python library (https://rpy2.github.io/) for running LIBRA on R snippet through Python console otherwise if your preprocessing was performed using Python but you are interested in running libra in its R implementation you are able to move it to R by using "reticulate" package (https://rstudio.github.io/reticulate/).
