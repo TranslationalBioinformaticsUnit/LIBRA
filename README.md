@@ -38,7 +38,7 @@ To run LIBRA pipeline or any other metric generated in the manuscript the follow
 
 # Material of interest
 
-### Tools against which it was compared
+### Tools against which it was compared:
 For validating LIBRA performance we compared it agains other:
 
 - **Integration performance compred to - non-published/available**: [Seurat4](https://github.com/satijalab/seurat).
@@ -48,5 +48,5 @@ For validating LIBRA performance we compared it agains other:
 ### LIBRA visual workflow:
 ![workflow.png](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/gaf/figures/workflow.png)
 
-### Versatility
+### Versatility:
 > **LIBRA was develop in R but feel free to use "rpy2" Python library (https://rpy2.github.io/) for running LIBRA on R snippet through Python console otherwise if your preprocessing was performed using Python but you are interested in running libra in its R implementation you are able to move it to R by using "reticulate" package (https://rstudio.github.io/reticulate/).**
