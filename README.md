@@ -23,7 +23,9 @@ To run LIBRA pipeline or any other metric generated in the manuscript the follow
 
 # Usage
 
-**LIBRA pipeline is made easy** to be run **especially for any Seurat package user**. The code is executed/stored in **Seurat R objects**, this allows the user to **benefit from the long ecosystem of functions and structures present in Seurat**, working under LIBRA modeling. **Either Seurat 3 in Rv3 enviroment or Seurat 4 in Rv4** enviroment can by used **by hand of LIBRA**.
+- **LIBRA pipeline is made easy** to be run **especially for any Seurat package user**. 
+- The code is executed/stored in **Seurat R objects**, this allows the user to **benefit from the long ecosystem of functions and structures present in Seurat**, working under LIBRA modeling. 
+- **Either Seurat 3 in Rv3 enviroment or Seurat 4 in Rv4** enviroment can by used **by hand of LIBRA**.
 
 ## Start running LIBRA
 
