@@ -1,7 +1,7 @@
 pkgLoad <- function( packages = "favourites" ) {
 
     if( length( packages ) == 1L && packages == "favourites" ) {
-        packages <- c( "keras", "stringr", "scclusteval", "Seurat",
+        packages <- c( "devtools","keras", "stringr", "scclusteval", "Seurat",
                        "ggplot2", "Signac", "scater", "gridExtra", "ggpubr",
                        "biomaRt", "scran", "cowplot", "Matrix",
                        "data.table", "GenomeInfoDb", "EnsDb.Hsapiens.v75", "patchwork", "rhdf5",
@@ -35,3 +35,4 @@ pkgLoad <- function( packages = "favourites" ) {
         )
     }
 }
+pkgLoad("favourites")
