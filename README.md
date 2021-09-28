@@ -7,20 +7,16 @@ This repository contains:
 - [LIBRA code](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/R/) to analyze and visualize paired Single-cell multi-omics integration and prediction analysis.
 - [LIBRA metrics](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/R/) are also available for quantifying outputs quality base on PPJI preservation measurement.
 
+For more information , check out the [online manuscript](https://www.biorxiv.org/content/10.1101/2021.01.27.428400v1) currently at biorxiv repository (will be updated asap).
+
 ## Material of interest
 
-### Datasets:
-For developing and testing the performance and quality of LIBRA, six paired multi-omic datasets were used.
-
-- DataSet1, SNARE-seq1: GSE126074. Data modalities: single-cell RNA-seq and single-cell ATAC-seq.
-- DataSet2, CITE-seq: GSE128639. Data modalities: single-cell RNA-seq and ADT panel for 25 antibodies.
-- DataSet3, Paired-seq: GSE130399. Data modalities: single-cell RNA-seq and single-cell ATAC-seq.
-- DataSet4, SHARE-seq: GSE140203. Data modalities: single-cell RNA-seq and single-cell ATAC-seq.
-- DataSet5, PBMC: 10X Genomics website repository. Data modalities: 10X Genomics single-cell RNA and single-cell ATAC-seq.
-- DataSet6, scNMT-seq: GSE109262. Data modalities: single-cell RNA-seq, single-cell ATAC-seq and single-cell DNA Methylation.
-
 ### Tools against which it was compared
-For validating LIBRA performance we compared it agains other non-publicly (Seurat 4) and already publicly (Seurat3, MOFA+, totalVI and BABEL) tools that performs similar tasks. 
+For validating LIBRA performance we compared it agains other:
+
+non-publicly (Seurat 4)
+
+publicly (Seurat3, MOFA+, totalVI and BABEL) tools that performs similar tasks. 
 
 -Integration performance compred to: Seurat3/4, MOFA+, totalVI and BABEL.  
 -Prediction performance compared to: BABEL.
