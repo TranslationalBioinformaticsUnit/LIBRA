@@ -9,11 +9,11 @@ This repository contains:
 
 For more information , check out the [online manuscript](https://www.biorxiv.org/content/10.1101/2021.01.27.428400v1) currently at biorxiv repository (will be updated asap).
 
-# Instalation:
+# Installation:
 
 To run LIBRA pipeline or any other metric generated in the manuscript the following enviromental settings are required:
 
-- Please run [R3_requirements.R](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/gaf/files/R3_requirements.R) under Rv3.5.2 or higher Rv3 for automaticaly install all dependencies required before using LIBRA.
+- Please run [R3_requirements.R](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/gaf/files/R3_requirements.R) under Rv3.5.2 or higher Rv3 for automatically install all dependencies required before using LIBRA.
 
 - Please run [R4_requirements.R](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/gaf/files/R4_requirements.R) under Rv4.0.3 or higher Rv4 for automatically install all dependencies required before using LIBRA.
 
