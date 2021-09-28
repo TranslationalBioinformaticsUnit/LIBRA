@@ -1,4 +1,4 @@
-## Github additional files:
+# Github additional files:
 
 **Figures**: Github additional content figures
 
