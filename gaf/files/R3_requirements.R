@@ -5,7 +5,7 @@ pkgLoad <- function( packages = "favourites" ) {
                        "ggplot2", "Signac", "scater", "gridExtra", 
                        "biomaRt", "scran", "cowplot", "Matrix",
                        "data.table", "GenomeInfoDb", "EnsDb.Hsapiens.v75", "patchwork", "rhdf5",
-                       "Rcpp","rdist",
+                       "Rcpp","rdist","dplyr","ChIPpeakAnno","hypeR"
         )
     }
 
