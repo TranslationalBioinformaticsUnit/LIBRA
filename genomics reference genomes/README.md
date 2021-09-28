@@ -1,4 +1,4 @@
-## 10X Genomics reference genomes used:
+# 10X Genomics reference genomes used:
 
 **Mouse reference, mm10**: Mus_musculus.GRCm38 --Version: 3.0.0
 
