@@ -14,12 +14,9 @@ For more information , check out the [online manuscript](https://www.biorxiv.org
 ### Tools against which it was compared
 For validating LIBRA performance we compared it agains other:
 
-non-publicly (Seurat 4)
+- **Integration performance compred to - non-published/available**: [Seurat4](https://github.com/satijalab/seurat).
 
-publicly (Seurat3, MOFA+, totalVI and BABEL) tools that performs similar tasks. 
-
--Integration performance compred to: Seurat3/4, MOFA+, totalVI and BABEL.  
--Prediction performance compared to: BABEL.
+- **Prediction performance compared to - published/available**: [Seurat3](https://satijalab.org/seurat/articles/integration_mapping.html), [MOFA+](https://biofam.github.io/MOFA2/index.html), [totalVI](https://github.com/YosefLab/scvi-tools), [BABEL](https://github.com/wukevin/babel).
 
 ### Required time to run the tool:
 All test have been executed on a CPU based server (Intel Corporation Xeon E3-1200 v3 Processor) with reasonable times.
