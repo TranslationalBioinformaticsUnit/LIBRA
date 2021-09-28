@@ -21,7 +21,7 @@ To run LIBRA pipeline or any other metric generated in the manuscript the follow
 
 -Please install the following **Python libraries**: scanpy_1.5.0, **scvi_0.8.1 ([for totalVI](https://docs.scvi-tools.org/en/stable/installation.html))** and anndata_0.7.5. 
 
-# Usage
+# Usage:
 
 - **LIBRA pipeline is made easy** to be run **especially for any Seurat package user**. 
 - The code is executed/stored in **Seurat R objects**, this allows the user to **benefit from the long ecosystem of functions and structures present in Seurat**, working under LIBRA modeling. 
