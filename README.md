@@ -1,4 +1,5 @@
-# LIBRA
+LIBRA <img src="gaf/figures/LIBRA_icon_2.png" width="181px" align="right" />
+===========
 *Machine Translation between paired Single-Cell Multi-Omics Data*
 
 This repository contains:
