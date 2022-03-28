@@ -15,6 +15,6 @@
     - Use "Metrics_LIBRA.R" for additional quality metrix computation
     > **Outputs: Different outputs generated during the training will be stored in the working directory.**
 
-- Use supp_code.R for Python fine-tune full list of models PPJI computation employed on LIBRA fine-tune.
+- Use **supp_code.R** for Python fine-tune full list of models PPJI computation employed on LIBRA fine-tune.
 
 
