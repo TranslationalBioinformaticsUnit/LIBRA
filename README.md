@@ -14,13 +14,13 @@ For further details, please refer to the [online manuscript](https://www.biorxiv
 
 To run LIBRA pipeline or any other metric generated in the manuscript the following enviromental settings are required:
 
-- Please run [R3_requirements.R](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/gaf/files/R3_requirements.R) under Rv3.5.2 or higher Rv3 for automatically install all dependencies required before using LIBRA.
+- Run [R3_requirements.R](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/gaf/files/R3_requirements.R) under R v3.5.2 or higher R v3.X.X for automatically install all dependencies required before using LIBRA.
 
-- Please run [R4_requirements.R](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/gaf/files/R4_requirements.R) under Rv4.0.3 or higher Rv4 for automatically install all dependencies required before using LIBRA.
+- Run [R4_requirements.R](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/gaf/files/R4_requirements.R) under R v4.0.3 or higher R v4.X.X for automatically install all dependencies required before using LIBRA.
 
 -Following libraries are **not supported under Rv3 enviroment: Seurat_4.0.0, MOFA2_1.0.1**.  
 
--Please install the following **Python libraries**: scanpy_1.5.0, **scvi_0.8.1 ([for totalVI](https://docs.scvi-tools.org/en/stable/installation.html))** and anndata_0.7.5. 
+-Please install the following **Python libraries** under Python v3.7.1 or higher: scanpy_1.5.0, **scvi_0.8.1 ([for totalVI](https://docs.scvi-tools.org/en/stable/installation.html))**, anndata_0.7.5, pandas_1.3.4, numpy_1.18.1, scipy_1.7.1, keras_2.7.0 and multiprocessing_2_6_2.
 
 # Usage:
 
