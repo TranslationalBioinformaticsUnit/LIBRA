@@ -28,8 +28,8 @@ To run LIBRA fine-tune pipeline generated in the manuscript the following enviro
 
 - **LIBRA pipeline is made easy** to be run especially for any Seurat package user. 
 - The code is executed/stored in **Seurat R objects**, this allows the user to **benefit from the long ecosystem of functions and structures present in Seurat**, working under LIBRA modeling. 
-- **Either Seurat 3 in R v3 enviroment or Seurat 4 in R v4** enviroment can by used **by hand of LIBRA**.
-- The **valid input for LIBRA** is any pair of omic matrices assigning the **cell** information in the **rows** and the **feature** information in the **columns**.
+- Either **Seurat3** in R v3 enviroment or **Seurat4** in R v4 enviroment can by used **by hand of LIBRA**.
+- The **valid input for LIBRA** is any pair of omic matrices assigning the cell information in the rows and the feature information in the columns.
 
 ## Getting Started LIBRA
 
@@ -45,9 +45,9 @@ To run LIBRA fine-tune pipeline generated in the manuscript the following enviro
 ### LIBRA benchmarking comparison:
 For validating LIBRA performance we compared it agains other:
 
-- **Integration performance compred to - non-published/available**: [Seurat4](https://github.com/satijalab/seurat).
+- Integration performance compred to - non-published/available: [Seurat4](https://github.com/satijalab/seurat).
 
-- **Prediction performance compared to - published/available**: [Seurat3](https://satijalab.org/seurat/articles/integration_mapping.html), [MOFA+](https://biofam.github.io/MOFA2/index.html), [totalVI](https://github.com/YosefLab/scvi-tools), [BABEL](https://github.com/wukevin/babel).
+- Prediction performance compared to - published/available: [Seurat3](https://satijalab.org/seurat/articles/integration_mapping.html), [MOFA+](https://biofam.github.io/MOFA2/index.html), [totalVI](https://github.com/YosefLab/scvi-tools), [BABEL](https://github.com/wukevin/babel).
 
 ### LIBRA visual workflow:
 ![workflow.png](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/gaf/figures/workflow.png)
