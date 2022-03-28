@@ -6,5 +6,6 @@
     - Use "Metrics_LIBRA.R" for additional quality metrix computation
     > **Outputs: Different outputs generated during the training will be stored in the working directory.**
 
-
+  -PPJI metric computation over all fine-tune models:
+    - Use supp_code.R stored at [R code](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/R/) employed on LIBRA manuscript.
 
