@@ -10,7 +10,7 @@ This repository contains:
 
 For further details, please refer to the [online manuscript](https://www.biorxiv.org/content/10.1101/2021.01.27.428400v1) currently at biorxiv repository (will be updated asap).
 
-# Installation:
+# Prerequisites:
 
 To run LIBRA pipeline or any other metric generated in the manuscript the following enviromental settings are required:
 
