@@ -26,9 +26,9 @@ To run LIBRA fine-tune pipeline generated in the manuscript the following enviro
 
 # Usage:
 
-- **LIBRA pipeline is made easy** to be run **especially for any Seurat package user**. 
+- **LIBRA pipeline is made easy** to be run especially for any Seurat package user. 
 - The code is executed/stored in **Seurat R objects**, this allows the user to **benefit from the long ecosystem of functions and structures present in Seurat**, working under LIBRA modeling. 
-- **Either Seurat 3 in Rv3 enviroment or Seurat 4 in Rv4** enviroment can by used **by hand of LIBRA**.
+- **Either Seurat 3 in R v3 enviroment or Seurat 4 in R v4** enviroment can by used **by hand of LIBRA**.
 
 ## Start running LIBRA
 
