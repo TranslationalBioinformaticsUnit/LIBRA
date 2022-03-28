@@ -4,9 +4,9 @@ LIBRA <img src="gaf/figures/LIBRA_icon_2.png" width="181px" align="right" />
 
 This repository contains:
 - [Online data](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/data/) employed on LIBRA manuscript.
-- [Seurat code](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/R/) employed to analyze and visualize integration analysis performed by Seurat.
-- [LIBRA code](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/R/) to analyze and visualize paired Single-cell multi-omics integration and prediction analysis.
-- [LIBRA metrics](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/R/) are also available for quantifying outputs quality base on PPJI preservation measurement.
+- [Seurat code](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/R/Seurat_code/) employed to analyze and visualize integration analysis performed by Seurat.
+- [LIBRA code](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/R/LIBRA_code/) to analyze and visualize paired Single-cell multi-omics integration and prediction analysis.
+- [LIBRA metrics](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/R/LIBRA_code/) are also available for quantifying outputs quality base on PPJI preservation measurement.
 
 For further details, please refer to the [online manuscript](https://www.biorxiv.org/content/10.1101/2021.01.27.428400v1) currently at biorxiv repository (will be updated asap).
 
