@@ -1,4 +1,4 @@
-LIBRA 1.0.0 <img src="gaf/figures/LIBRA_icon_2.png" width="181px" align="right" />
+LIBRA  <img src="gaf/figures/LIBRA_icon_2.png" width="181px" align="right" />
 ===========
 *Machine Translation between paired Single-Cell Multi-Omics Data*
 
