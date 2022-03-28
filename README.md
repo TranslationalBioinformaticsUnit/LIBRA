@@ -20,6 +20,8 @@ To run LIBRA pipeline or any other metric generated in the manuscript the follow
 
 -Following libraries are **not supported under Rv3 enviroment: Seurat_4.0.0, MOFA2_1.0.1**.  
 
+To run LIBRA fine-tune pipeline generated in the manuscript the following enviromental settings are required:
+
 -Please install the following **Python libraries** under Python v3.7.1 or higher: scanpy_1.5.0, **scvi_0.8.1 ([for totalVI](https://docs.scvi-tools.org/en/stable/installation.html))**, anndata_0.7.5, pandas_1.3.4, numpy_1.18.1, scipy_1.7.1, keras_2.7.0 and multiprocessing_2_6_2.
 
 # Usage:
