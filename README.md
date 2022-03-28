@@ -12,15 +12,15 @@ For further details, please refer to the [online manuscript](https://www.biorxiv
 
 # Prerequisites:
 
-To run LIBRA pipeline or any other metric generated in the manuscript the following enviromental settings are required:
+To run LIBRA pipeline or any other metric generated in the manuscript the following environmental settings are required:
 
-- Run [R3_requirements.R](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/gaf/files/R3_requirements.R) under R v3.5.2 or higher R v3.X.X for automatically install all dependencies required before using LIBRA.
+- Run [R3_requirements.R](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/gaf/files/R3_requirements.R) under R 3.5.2 or higher R 3.X.X for automatically install all dependencies required before using LIBRA.
 
-- Run [R4_requirements.R](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/gaf/files/R4_requirements.R) under R v4.0.3 or higher R v4.X.X for automatically install all dependencies required before using LIBRA.
+- Run [R4_requirements.R](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/gaf/files/R4_requirements.R) under R 4.0.3 or higher R 4.X.X for automatically install all dependencies required before using LIBRA.
 
--Following libraries are **not supported under Rv3 enviroment: Seurat_4.0.0, MOFA2_1.0.1**.  
+-Following libraries are **not supported under R 3.X.X environment: Seurat_4.0.0, MOFA2_1.0.1**.  
 
-To run LIBRA fine-tune pipeline generated in the manuscript the following enviromental settings are required:
+To run LIBRA fine-tune pipeline generated in the manuscript the following environmental settings are required:
 
 -Please install the following **Python libraries** under Python v3.7.1 or higher: scanpy_1.5.0, **scvi_0.8.1 ([for totalVI](https://docs.scvi-tools.org/en/stable/installation.html))**, anndata_0.7.5, pandas_1.3.4, numpy_1.18.1, scipy_1.7.1, keras_2.7.0 and multiprocessing_2_6_2.
 
@@ -28,7 +28,7 @@ To run LIBRA fine-tune pipeline generated in the manuscript the following enviro
 
 - **LIBRA pipeline is made easy** to be run especially for any Seurat package user. 
 - The code is executed/stored in **Seurat R objects**, this allows the user to **benefit from the long ecosystem of functions and structures present in Seurat**, working under LIBRA modeling. 
-- Either **Seurat3** in R v3 enviroment or **Seurat4** in R v4 enviroment can by used **by hand of LIBRA**.
+- Either **Seurat3** in R 3.X.X environment or **Seurat4** in R 4.X.X environment can be used **by hand of LIBRA**.
 - The **valid input for LIBRA** is any pair of omic matrices assigning the cell information in the rows and the feature information in the columns.
 
 ## Getting Started LIBRA
@@ -43,9 +43,9 @@ To run LIBRA fine-tune pipeline generated in the manuscript the following enviro
 # Material of interest
 
 ### LIBRA benchmarking comparison:
-For validating LIBRA performance we compared it agains other:
+For validating LIBRA performance we compared it against other:
 
-- Integration performance compred to - non-published/available: [Seurat4](https://github.com/satijalab/seurat).
+- Integration performance compared to - non-published/available: [Seurat4](https://github.com/satijalab/seurat).
 
 - Prediction performance compared to - published/available: [Seurat3](https://satijalab.org/seurat/articles/integration_mapping.html), [MOFA+](https://biofam.github.io/MOFA2/index.html), [totalVI](https://github.com/YosefLab/scvi-tools), [BABEL](https://github.com/wukevin/babel).
 
