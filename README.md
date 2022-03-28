@@ -29,8 +29,9 @@ To run LIBRA fine-tune pipeline generated in the manuscript the following enviro
 - **LIBRA pipeline is made easy** to be run especially for any Seurat package user. 
 - The code is executed/stored in **Seurat R objects**, this allows the user to **benefit from the long ecosystem of functions and structures present in Seurat**, working under LIBRA modeling. 
 - **Either Seurat 3 in R v3 enviroment or Seurat 4 in R v4** enviroment can by used **by hand of LIBRA**.
+- The **valid input for LIBRA** is any pair of omic matrices assigning the **cell** information in the **rows** and the **feature** information in the **columns**.
 
-## Start running LIBRA
+## Getting Started LIBRA
 
 ### Basic vignettes:
 - Model training and integration/prediction [vignette](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/vignettes/Jupyter_notebook/LIBRA_main_pipeline_v1.0.1.ipynb) for a quick example. 
@@ -41,7 +42,7 @@ To run LIBRA fine-tune pipeline generated in the manuscript the following enviro
 
 # Material of interest
 
-### Tools against which it was compared:
+### LIBRA benchmarking comparison:
 For validating LIBRA performance we compared it agains other:
 
 - **Integration performance compred to - non-published/available**: [Seurat4](https://github.com/satijalab/seurat).
