@@ -8,7 +8,7 @@ This repository contains:
 - [LIBRA code](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/R/) to analyze and visualize paired Single-cell multi-omics integration and prediction analysis.
 - [LIBRA metrics](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/R/) are also available for quantifying outputs quality base on PPJI preservation measurement.
 
-For more information , check out the [online manuscript](https://www.biorxiv.org/content/10.1101/2021.01.27.428400v1) currently at biorxiv repository (will be updated asap).
+For further details, please refer to the [online manuscript](https://www.biorxiv.org/content/10.1101/2021.01.27.428400v1) currently at biorxiv repository (will be updated asap).
 
 # Installation:
 
