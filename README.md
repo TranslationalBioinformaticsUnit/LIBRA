@@ -47,7 +47,7 @@ To run LIBRA fine-tune pipeline generated in the manuscript the following enviro
 # Usage
 
 - **LIBRA pipeline is made easy** to be run especially for any Seurat package user. 
-- The code is executed/stored in **Seurat R objects**, this allows the user to **benefit from the long ecosystem of functions and structures present in Seurat**, working under LIBRA modeling. 
+- The code is executed/stored in **Seurat R objects**, this allows the user to **benefit from the long ecosystem of functions and structures present in Seurat**. 
 - Either **Seurat3** in R 3.X.X environment or **Seurat4** in R 4.X.X environment can be used **by hand of LIBRA**.
 - The **valid input for LIBRA** is any pair of omic matrices assigning the cell information in the rows and the feature information in the columns.
 
