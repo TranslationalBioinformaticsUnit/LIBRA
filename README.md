@@ -30,7 +30,7 @@ To run LIBRA fine-tune pipeline generated in the manuscript the following enviro
 -Please install the following **Python libraries** under Python v3.7.1 or higher: scanpy_1.5.0, **scvi_0.8.1 ([for totalVI](https://docs.scvi-tools.org/en/stable/installation.html))**, anndata_0.7.5, pandas_1.3.4, numpy_1.18.1, scipy_1.7.1, keras_2.7.0 and multiprocessing_2_6_2.
 
 # Datasets
-| LIBRA ref name | GSE link | Modalities | Technology | Genomic ref used |
+| LIBRA name | GSE link | Modalities | Technology | Genomic ref used |
 |    :---:    |    :---:    |    :---:    |    :---:    |    :---: |
 | DataSet1 | [GSE126074](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE126074) | scRNAseq + scATACseq | SNARE-seq | [Mus_musculus.GRCm38 Ver: 3.0.0](https://support.10xgenomics.com/single-cell-gene-expression/software/release-notes/build#) |
 | DataSet2 | [GSE128639](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi) | scRNAseq + scADT | CITE-seq | [Homo_sapiens.GRCh38 Ver: 3.0.0](https://support.10xgenomics.com/single-cell-gene-expression/software/release-notes/build#) |
