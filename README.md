@@ -1,17 +1,21 @@
-LIBRA  <img src="gaf/figures/LIBRA_icon_2.png" width="181px" align="right" />
+LIBRA - Machine Translation between paired <img src="gaf/figures/LIBRA_icon_2.png" width="181px" align="right" />  
+Single-Cell Multi-Omics Data 
 ===========
-*Machine Translation between paired Single-Cell Multi-Omics Data*
+This repository contains the [LIBRA code](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/R/LIBRA_code/) and [online data](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/data/) used for Single-cell multi-omics integration and prediction analysis employed on [LIBRA manuscript](https://www.biorxiv.org/content/10.1101/2021.01.27.428400v1). [Libra metrics](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/R/LIBRA_code/) are also available for quantifying outputs quality as well as novel PPJI preservation measurement. [Seurat code](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/R/Seurat_code/) employed to analyze LIBRA input omics as well as for clustering and visualization pipelines are providen.
 
-This repository contains:
-- [Online data](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/data/) employed on LIBRA manuscript.
-- [Seurat code](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/R/Seurat_code/) employed to analyze and visualize integration analysis performed by Seurat.
-- [LIBRA code](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/R/LIBRA_code/) to analyze and visualize paired Single-cell multi-omics integration and prediction analysis.
-- [LIBRA metrics](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/R/LIBRA_code/) are also available for quantifying outputs quality base on PPJI preservation measurement.
+- [Summary](#summary)
+- [Prerequisites](#prerequisites)
+- [Usage](#usage)
+- [Getting Started LIBRA](#getting-started-libra)
+- [Material of interest](#material-of-interest)
+
+# Summary
+LIBRA is a deep learning model that is designed for Single-cell multi-omics integration and prediction. LIBRA performs this by using an unbalance Autoencoder which learns a shared low-dimensional embedding from both experiment omics, combining each sample's uniqueness for generating a enriched representation of integrated data respect to the original experiment independent data. This tool has been develop in R code. Next, fine-tune LIBRA tool has been develop for paralellize training of LIBRA models using a grid structure for selecting optimal hyperparameters in a automatic way excluding the requirement of doing this by users saving considerable time. This tool is providen in Python code.
 
 For further details, please refer to the [online manuscript](https://www.biorxiv.org/content/10.1101/2021.01.27.428400v1) currently at biorxiv repository (will be updated asap).
 
-# Prerequisites:
-
+# Prerequisites
+ 
 To run LIBRA pipeline or any other metric generated in the manuscript the following environmental settings are required:
 
 - Run [R3_requirements.R](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/gaf/files/R3_requirements.R) under R 3.5.2 or higher R 3.X.X for automatically install all dependencies required before using LIBRA.
@@ -24,14 +28,14 @@ To run LIBRA fine-tune pipeline generated in the manuscript the following enviro
 
 -Please install the following **Python libraries** under Python v3.7.1 or higher: scanpy_1.5.0, **scvi_0.8.1 ([for totalVI](https://docs.scvi-tools.org/en/stable/installation.html))**, anndata_0.7.5, pandas_1.3.4, numpy_1.18.1, scipy_1.7.1, keras_2.7.0 and multiprocessing_2_6_2.
 
-# Usage:
+# Usage
 
 - **LIBRA pipeline is made easy** to be run especially for any Seurat package user. 
 - The code is executed/stored in **Seurat R objects**, this allows the user to **benefit from the long ecosystem of functions and structures present in Seurat**, working under LIBRA modeling. 
 - Either **Seurat3** in R 3.X.X environment or **Seurat4** in R 4.X.X environment can be used **by hand of LIBRA**.
 - The **valid input for LIBRA** is any pair of omic matrices assigning the cell information in the rows and the feature information in the columns.
 
-## Getting Started LIBRA
+# Getting Started LIBRA
 
 ### Basic vignettes:
 - Model training and integration/prediction [vignette](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/vignettes/Jupyter_notebook/LIBRA_main_pipeline_v1.0.1.ipynb) for a quick example. 
