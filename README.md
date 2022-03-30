@@ -72,5 +72,7 @@ For validating LIBRA performance we compared it against other:
 
 - Prediction performance compared to - published/available: [Seurat3](https://satijalab.org/seurat/articles/integration_mapping.html), [MOFA+](https://biofam.github.io/MOFA2/index.html), [totalVI](https://github.com/YosefLab/scvi-tools), [BABEL](https://github.com/wukevin/babel).
 
+Further details are providen at supplementary material added at [LIBRA manuscript](https://www.biorxiv.org/content/10.1101/2021.01.27.428400v1).
+
 ### LIBRA visual workflow:
 ![workflow.png](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/gaf/figures/workflow.png)
