@@ -10,7 +10,7 @@
     > **Normalization method: Different normalization methods can enhance different LIBRA applications such as - by now - integration or prediction.** As an example Seurat SCT method has shown similar integration performance but a significant decrease on prediction power.
 
 - LIBRA ([Libra_code](https://github.com/TranslationalBioinformaticsUnit/LIBRA/tree/main/R/LIBRA_code))
-  - Use analysis_output.RData as input for LIBRA neural network
+  - Use previous **Analysis step generated .RData** as input for LIBRA neural network
     - Use "LIBRA.R" for networks training
     - Use "Metrics_LIBRA.R" for additional quality metrix computation
     > **Outputs: Different outputs generated during the training will be stored in the working directory.**
