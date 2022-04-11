@@ -6,29 +6,29 @@ Usage
 Installation
 ------------
 
-To use Lumache, first install it using pip:
+To use sc-LIBRA, first install it using pip:
 
 .. code-block:: console
 
-   (.venv) $ pip install lumache
+   (.venv) $ pip install sc_libra
 
-Creating recipes
+Using pipeline
 ----------------
 
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
+To load input data,
+you can use the sc_libra.data_load()`` function:
 
-.. autofunction:: lumache.get_random_ingredients
+.. autofunction:: sc_libra.data_load
 
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
+The omic types parameter should be either ``"omic_1"``, ``"omic_2"``,
+or ``"None"``. Otherwise, :py:func:`sc_libra.data_load`
 will raise an exception.
 
-.. autoexception:: lumache.InvalidKindError
+.. autoexception:: sc_libra.InvalidKindError
 
 For example:
 
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
+>>> import sc_libra
+>>> sc_libra.load_data("ATAC","RNA")
+["ATAC","RNA"]
 

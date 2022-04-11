@@ -2,12 +2,12 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'LIBRA'
+copyright = '2022, Xabier Martinez de Morentin'
+author = 'Xabier'
 
-release = '0.1'
-version = '0.1.0'
+release = '0.0.24'
+version = '0.0.0'
 
 # -- General configuration
 
