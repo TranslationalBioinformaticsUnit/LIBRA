@@ -109,6 +109,26 @@ If user what to use LIBRA model generated for a prediction task over same or new
 
 Metrics computation
 -------------------
+LIBRA provides a function *libra_metrics* to compute three different measurements explained on the paper.
+
+**Example (nn_consistency)**:
+
+.. code-block:: python
+    
+    output_metris=sc_libra.libra_metrics(output_data, metric='nn_consistency', path_to_libra_outputs='/...LIBRA_outputs/Integration/')
+    
+**Example (nn_mse)**:
+
+.. code-block:: python
+    
+    output_metris=sc_libra.libra_metrics(output_data, metric='nn_mse', path_to_libra_outputs='/...LIBRA_outputs/Models/')
+    
+**Example (ppji)**:
+
+.. code-block:: python
+    
+    output_metris=sc_libra.libra_metrics(output_data, cluster_origin=your_reference_cluster, metric='ppji', path_to_libra_outputs='/...LIBRA_outputs/Integration/')
+    
 
 
 
