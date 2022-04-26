@@ -1,34 +1,29 @@
-Usage
-=====
+LIBRA
+========
 
-.. _installation:
+LIBRA is a Python toolbox for Single-Cell data integration and prediction.
+This project aims to lower the barrier for new users to AI state-of-the-art techniques and propose an ubalanced-AE for shared latent representation extraction between two paired-Single-Cell omics. Through this model different steps in the downstream analysis are easily accomplished while retains good timing in opposite to other AI methods that requires many hours to finish the training processes. This is how a good balance between speed and accuracy is obtained.
 
-Installation
-------------
+We encourage users and developers to report problems, request
+features, ask for help, or leave general comments on `github <https://github.com/TranslationalBioinformaticsUnit/LIBRA>`_.
+Please refer to our `usage guide <usage.rst>`_ if you wish to extend LIBRA's functionality and/or contribute to the project.
 
-To use sc-LIBRA, first install it using pip:
+LIBRA is distributed under the open source `GNU General Public License v3.0
+<https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/LICENSE>`_.
+Please cite `this paper <https://www.biorxiv.org/content/10.1101/2021.01.27.428400v1>`_ if you publish work using LIBRA:
+  
+.. toctree::
+   :maxdepth: 1
+   :caption: Getting Started
 
-.. code-block:: console
+   quickstart.rst
+   R scripts <https://github.com/TranslationalBioinformaticsUnit/LIBRA/tree/main/R>
+   Python scripts <https://github.com/TranslationalBioinformaticsUnit/LIBRA/tree/main/Python>
+   api-reference.rst
 
-   (.venv) $ pip install sc_libra
+.. toctree::
+   :maxdepth: 1
+   :caption: Notebooks
 
-Using pipeline
-----------------
-
-To load input data,
-you can use the sc_libra.data_load()`` function:
-
-.. autofunction:: sc_libra.data_load
-
-The omic types parameter should be either ``"omic_1"``, ``"omic_2"``,
-or ``"None"``. Otherwise, :py:func:`sc_libra.data_load`
-will raise an exception.
-
-.. autoexception:: sc_libra.InvalidKindError
-
-For example:
-
->>> import sc_libra
->>> sc_libra.load_data("ATAC","RNA")
-["ATAC","RNA"]
+   Vignettes <https://github.com/TranslationalBioinformaticsUnit/LIBRA/tree/main/vignettes>
 
