@@ -17,9 +17,14 @@ Please cite `this paper <https://www.biorxiv.org/content/10.1101/2021.01.27.4284
    :caption: Getting Started
 
    quickstart.rst
+   tutorial.rst
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Resources
+
    R scripts <https://github.com/TranslationalBioinformaticsUnit/LIBRA/tree/main/R>
    Python scripts <https://github.com/TranslationalBioinformaticsUnit/LIBRA/tree/main/Python>
-   api-reference.rst
 
 .. toctree::
    :maxdepth: 1
