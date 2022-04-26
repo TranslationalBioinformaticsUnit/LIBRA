@@ -111,25 +111,30 @@ Metrics computation
 -------------------
 LIBRA provides a function *libra_metrics* to compute three different measurements explained on the paper.
 
+Setting *libra_metrics* metric parameter as *nn_consistency* will compute euclidean distance between latent space computed in LIBRA model to output obtained of a secondary neural network with same hyperparameters to encode to the obtained latent space. Through this metric the consistency of the neural network can be measured for each independent paired cell. Biomodal distances for each modal peak will be given and ploted as output apart to the global euclidean distance computed for each cell and enconding models in .hdf5 format. If multiple output models are present in folder due to a grid used during model training, metric will be computed for all available models and all outputs will be stored with the corresponding hyperparameter as names. If user desires only to compute metric over one specific model it can be selected through the *libra_output* parameter. In order to train this secondary networks in paralell *n_jobs* parameter let user to select the number of models to be trained at same time.
+
 **Example (nn_consistency)**:
 
 .. code-block:: python
     
-    output_metris=sc_libra.libra_metrics(output_data, metric='nn_consistency', path_to_libra_outputs='/...LIBRA_outputs/Integration/')
-    
+    output_metris=sc_libra.libra_metrics(output_data, metric='nn_consistency', n_jobs=20, path_to_libra_outputs='/...LIBRA_outputs/Integration/') #For compute over all models trained with a parallel value of 20.
+
+Setting the metric parametet as *nn_mse* will predict over all present models stored and compute the mean squared error against the output omic. As previously *libra_output* can be used to specify the name of a model to compute it only for the desired mdoel. Outputs will be sumarized and stored in corresponding path automatically.
+
 **Example (nn_mse)**:
 
 .. code-block:: python
     
     output_metris=sc_libra.libra_metrics(output_data, metric='nn_mse', path_to_libra_outputs='/...LIBRA_outputs/Models/')
-    
+
+Finally PPJI metric can be computed against the reference obtained clustering of either omics to measure how preserved is the biological information in clusterns in the integrated latent space obtained in LIBRA model. To include this reference clustering information *cluster_origin* parameter is used. To feed this parameter information "cluster_origin=adata.obs['leiden']" serves as example of expected input format. **We strongly recomend to compute reference clusterings using 'leiden' algorithm as it has prove to provide good results and to exclude divergences in clusters due to different algorithms use and not becouse the model performance (LIBRA use 'leiden' and the method for latent clustering computation).** As before *libra_output* can be used to specify the name of a model to compute it only for the desired mdoel. Outputs will be saved after function ends.
+
 **Example (ppji)**:
 
 .. code-block:: python
     
     output_metris=sc_libra.libra_metrics(output_data, cluster_origin=your_reference_cluster, metric='ppji', path_to_libra_outputs='/...LIBRA_outputs/Integration/')
     
-
 
 
 
