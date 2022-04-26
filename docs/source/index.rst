@@ -17,6 +17,7 @@ Please cite `this paper <https://www.biorxiv.org/content/10.1101/2021.01.27.4284
    :caption: Getting Started
 
    <quickstart.rst>
+   quickstart.rst
    R scripts <https://github.com/TranslationalBioinformaticsUnit/LIBRA/tree/main/R>
    Python scripts <https://github.com/TranslationalBioinformaticsUnit/LIBRA/tree/main/Python>
    api-reference.rst
