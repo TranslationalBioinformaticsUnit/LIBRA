@@ -86,5 +86,26 @@ For bosting speed (if user hardware is sufficient) and extra parameter can be ad
 
     output_data=libra(par, n_jobs=20) #For training 20 models in parallel (your CPU should have at least 20 cores, and enought RAM to handle them in memmory).
 
+All these parameters can be combined for desired task.
+
 Prediction using LIBRA model
 ----------------------------
+
+If user what to use LIBRA model generated for a prediction task over same or new input dataset, it can be done through this function, *libra_predict* as following example. Either latent of output spaces can be predicted.
+
+**Example (predict over input dataset)**:
+
+.. code-block:: python
+    
+    model = load_model('/.../LIBRA_outputs/Models/model_n_layers2_n_nodes512_alpha0.3_dropout0.2_batch_size7000_mid_layer10.hdf5')
+    input_data = output_data[0].todense() #For predict over input dataset. A novel one can be used here.
+    to_predict='integrated_space' #For latent space prediction or 'modality_B' for output prediction.
+    
+    predicted_data = libra_predict(model, input_data, to_predict)
+
+
+
+
+
+
+
