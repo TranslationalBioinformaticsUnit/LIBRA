@@ -6,7 +6,7 @@ project = 'LIBRA'
 copyright = '2022, Xabier Martinez de Morentin'
 author = 'Xabier'
 
-release = '0.0.24'
+release = '0.0.28'
 version = '0.0.0'
 
 # -- General configuration
