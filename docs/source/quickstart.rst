@@ -27,7 +27,7 @@ Enviroment preparation
 ----------------------
 LIBRA make use of rpy2 for running some specific R functions. In order to import properly this dependency is mandatory that Python knows where are the R libs for the specific R version used. This is a requirement of rpy2 and should be done, else sc_libra will raise and error when importing it (as it will import all dependecies required as it is imported) This can be done in two steps:
 
-#. Run: **export LD_LIBRARY_PATH="/YOUR_PATH_TO_R_LIBS_HERE:$LD_LIBRARY_PATH"** on console prior to run Python.
+1. Run: **export LD_LIBRARY_PATH="/YOUR_PATH_TO_R_LIBS_HERE:$LD_LIBRARY_PATH"** on console prior to run Python.
 
 Typical locations are: 
 
@@ -36,7 +36,7 @@ Typical locations are:
 - **export LD_LIBRARY_PATH="/usr/lib64/R/:$LD_LIBRARY_PATH"** (if global instalaltion of R was done).
 
 
-#. Open your Python enviroment and run:
+2. Open your Python enviroment and run:
 
 - **import os**
 
