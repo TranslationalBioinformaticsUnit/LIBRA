@@ -22,7 +22,7 @@ A universal loading data is provided for easy data loading into Python enviromen
 
 Datasets should be loaded in order been dataset1 the input modality to LIBRA model and dataset2 the output modality. **We strongly recomend to set RNA as the second modality**. By now only specific actions are performed over RNA omic so it is **important to set "RNA" name to RNA omic input dataset**, in oder cases desired name can by used. If both input datasets are in working directory path, no paths are required by *load_data* function.
 
-Example (input files are in wd):
+**Example (input files are in wd)**:
 
 .. code-block:: python
 
@@ -30,7 +30,7 @@ Example (input files are in wd):
     
 If input datasets are in a different location than working directory, *dataset1_path* and *dataset2_path* can be used (dataset2_path will be equal to dataset1_path if not setted).
 
-Example (input files are in other directory than wd):
+**Example (input files are in other directory than wd)**:
 
 .. code-block:: python
 
@@ -38,7 +38,7 @@ Example (input files are in other directory than wd):
 
 If 10X folder contains the input data desired, specify only the path where files are and they will be automatically loaded.
 
-Example (10X folder as input):
+**Example (10X folder as input)**:
 
 .. code-block:: python
 
@@ -49,3 +49,42 @@ As a result output (par in these examples) will contain a dictionary such as:
 
 Training LIBRA model
 --------------------
+
+LIBRA can run in many different ways using the *libra* function. This step uses the previously generated variable as input (in this example, par), but any other generated dictionary by user that satisfies the above requirements can be used as input. 
+
+The most basic way is at following example shows. This will train the LIBRA model with default parameters finding a good balance between prediction/integration performance. Will generate integration output file containing latent space for each cell and sotore it in automatically generated tree of directories. Model will also be stored in .hdf5 format.
+
+**Example (default use)**:
+
+.. code-block:: python
+
+    output_data=libra(par)
+
+LIBRA can also be used for training a bunch of models for bosting performance on one of the main tasks over the other (prediction/integration). To this aim a grid of parameters will be used generating hundreds of models and storing the outputs following the same default squema. A custom grid can also be used if desired by user.
+
+**Example (bossting one task over the other)**:
+
+.. code-block:: python
+
+    output_data=libra(par, training_mode = 'fine_tune_prediction') #For prediction best model finding
+    output_data=libra(par, training_mode = 'fine_tune_integration') #For prediction best model finding
+    output_data=libra(par, training_mode = 'custom') #For custom grid user
+ 
+Extra parameters can by added to the function for example *n_top_genes*. In the case of containing a omic named as "RNA" *libra* function will filter gen space to contain only the most 2000 highly variable genes, this is peformed becose in our experiments RNA has prove to provide better performance over LIBRA model when only using HVG. If a different amount of genes is wanted it can be setted as in following example:
+
+**Example (using other amount of genes than 2000 HVG)**:
+
+.. code-block:: python
+
+    output_data=libra(par, n_top_genes = 3000) #For use 3000 number of HVG
+    
+For bosting speed (if user hardware is sufficient) and extra parameter can be added, *n_jobs*. This parameter setted as default to 1, can be changed to any amount of cores present in users CPU to perform multiple model trainings in paralel. This is designed specifically for other that the default *libra* option where many models will be trained depending on grid selected. This reduces the time required but also requires more RAM memory.
+
+**Example (parallel training for grid based version)**:
+
+.. code-block:: python
+
+    output_data=libra(par, n_jobs=20) #For training 20 models in parallel (your CPU should have at least 20 cores, and enought RAM to handle them in memmory).
+
+Prediction using LIBRA model
+----------------------------
