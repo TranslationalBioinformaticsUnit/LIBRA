@@ -4,7 +4,7 @@ Tutorial
 LIBRA provides four main functions that coverages all required aspects of the proposed pipeline.
 
 
-Enviroment preparation
+Environment preparation
 ------------
 
 First dependencies should be loaded by setting R path and then importing **sc_libra** module (at this moment rest of required dependencies will also be loaded). In order to have an ordered working directory is recommended to set the directory path desired where the tree of folders and files will be saved during the different functions execution. The tree of folders will be generated under working directory path automatically.
@@ -20,7 +20,7 @@ First dependencies should be loaded by setting R path and then importing **sc_li
 Loading input data 
 ------------------
 
-A universal loading data is provided for easy data loading into Python enviroment. Input file formats will be automatically detected among: **AnnData(".h5ad"), sparse matrix(".mtx",".txt"), coma separated matrix(.csv), 10XGenomics(.mtx folder) and 10XGenomics(.h5 file)**. If format is different data should be loaded by user with corresponding command and harmonized as this function does. 
+A universal loading data is provided for easy data loading into Python environment. Input file formats will be automatically detected among: **AnnData(".h5ad"), sparse matrix(".mtx",".txt"), coma separated matrix(.csv), 10XGenomics(.mtx folder) and 10XGenomics(.h5 file)**. If format is different data should be loaded by user with corresponding command and harmonized as this function does. 
 
 Datasets should be loaded in order been dataset1 the input modality to LIBRA model and dataset2 the output modality. **We strongly recomend to set RNA as the second modality**. By now only specific actions are performed over RNA omic so it is **important to set "RNA" name to RNA omic input dataset**, in oder cases desired name can by used. If both input datasets are in working directory path, no paths are required by *load_data* function.
 
