@@ -38,7 +38,7 @@ To run LIBRA fine-tune pipeline generated in the manuscript the following enviro
 > **LIBRA was develop in R but feel free to use "rpy2" Python library (https://rpy2.github.io/) for running LIBRA on R snippet through Python console otherwise if your preprocessing was performed using Python but you are interested in running libra in its R implementation you are able to move it to R by using "reticulate" package (https://rstudio.github.io/reticulate/).**
 
 # Datasets  
-Find [Neurips](https://openproblems.bio/neurips_2021/) provided dataset for LIBRA testing at figsahre repository to be downloaded [here](https://figshare.com/s/a91142324e1237fbf87f).
+Find [Neurips](https://openproblems.bio/neurips_2021/) provided dataset for LIBRA testing at figsahre repository to be downloaded [here](https://figshare.com/s/a91142324e1237fbf87f). Following datasets consist only on the sparse expression matrix without cell/feature identity, go to corresponding autor references for original datasets.
 | LIBRA name | GSE link | Modalities | Technology | Genomic ref used | Download sparse matrix |
 |    :---:    |    :---:    |    :---:    |    :---:    |    :---:    |    :---:    |
 | DataSet1 | [GSE126074](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE126074) | scRNAseq + scATACseq | SNARE-seq | [Mus_musculus.GRCm38 Ver: 3.0.0](https://support.10xgenomics.com/single-cell-gene-expression/software/release-notes/build#) | [RNA](https://figshare.com/s/c9b87f4ac1d1c030e128) and [ATAC](https://figshare.com/s/9ff9ea93a2108478bb36) |
