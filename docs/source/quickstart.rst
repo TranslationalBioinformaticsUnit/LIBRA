@@ -9,7 +9,7 @@ Usually only the following steps are required:
 #. Install Python **3.7.0** or above.
 #. Install R **3.5.2** or above.
 #. Install `sc_libra <https://pypi.org/manage/project/sc-libra/releases/>`_ Python package.
-#. Prepare the **enviroment** before importing sc_libra.
+#. Prepare the **environment** before importing sc_libra.
 
 
 Installation
@@ -23,7 +23,7 @@ All dependencies will by installed when sc_libra is installed through:
     $ pip install sc_libra
 
 
-Enviroment preparation
+Environment preparation
 ----------------------
 LIBRA make use of rpy2 for running some specific R functions. In order to import properly this dependency is mandatory that Python knows where are the R libs for the specific R version used. This is a requirement of rpy2 and should be done, else sc_libra will raise and error when importing it (as it will import all dependecies required as it is imported) This can be done in two steps:
 
@@ -36,7 +36,7 @@ Typical locations are:
 - **export LD_LIBRARY_PATH="/usr/lib64/R/:$LD_LIBRARY_PATH"** (if global instalaltion of R was done).
 
 
-2. Open your Python enviroment and run:
+2. Open your Python environment and run:
 
 - **import os**
 
