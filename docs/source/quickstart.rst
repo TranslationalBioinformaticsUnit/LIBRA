@@ -54,4 +54,4 @@ Typical locations are:
 
 - **export os.environ['R_HOME'] = "/usr/lib64/R/"** (if global installaltion of R was done).
 
-Through these two steps possible miss-making errors because incorrect R version pointed can be evade (often if more than one R version is installed).
+Through these two steps possible miss-making errors because incorrect R version pointed can be evaded (often if more than one R version is installed).
