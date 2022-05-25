@@ -2,11 +2,13 @@ LIBRA
 ========
 
 LIBRA is a Python toolbox for Single-Cell data integration and prediction.
-This project aims to lower the barrier for new users to AI state-of-the-art techniques and propose an ubalanced-AE for shared latent representation extraction between two paired-Single-Cell omics. Through this model different steps in the downstream analysis are easily accomplished while retains good timing in opposite to other AI methods that requires many hours to finish the training processes. This is how a good balance between speed and accuracy is obtained.
+This project aims to lower the barrier for new users to AI state-of-the-art techniques and propose an unbalanced-AE for shared latent representation extraction between two paired-Single-Cell omics. This package provides state-of-art performance while retains good execution timing in opposite to other AI methods that requires many hours to finish similar training processes. This makes possible to train hundreds of models in parallel in search of parameters that further optimize the results in moderate times using aLIBRA. 
+
+LIBRA has been designed using TensorFlow, any system that support it is compatible with LIBRA package. It has been tested on CENTOS 7 and ROCKY 8.5 os.
 
 We encourage users and developers to report problems, request
 features, ask for help, or leave general comments on `github <https://github.com/TranslationalBioinformaticsUnit/LIBRA>`_.
-Please refer to our `usage guide <usage.rst>`_ if you wish to extend LIBRA's functionality and/or contribute to the project.
+Please refer to our `usage guide <index.rst>`_ if you wish to extend LIBRA's functionality and/or contribute to the project.
 
 LIBRA is distributed under the open source `GNU General Public License v3.0
 <https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/LICENSE>`_.
