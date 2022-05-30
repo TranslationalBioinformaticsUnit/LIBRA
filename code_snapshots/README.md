@@ -22,3 +22,12 @@ To run LIBRA fine-tune pipeline generated in the manuscript the following enviro
 - Either **Seurat3** in R 3.X.X environment or **Seurat4** in R 4.X.X environment can be used **by hand of LIBRA**.
 - The **valid input for LIBRA** is any pair of omic matrices assigning the cell information in the rows and the feature information in the columns.
 - Easiest way of running LIBRA analysis is though [sc-Libra](https://pypi.org/project/sc-libra/) python package. Package [documentation](https://sc-libra.readthedocs.io/en/latest/) is online available using "Read the Docs" platform.
+
+# Getting Started LIBRA
+
+### Basic vignettes:
+- Model training and integration/prediction [vignette](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/vignettes/Jupyter_notebook/LIBRA_main_pipeline_v1.0.1.ipynb) for a quick example. 
+- PPJI preservation metric computation [vignette](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/vignettes/Jupyter_notebook/LIBRA_ppji_metric_v1.0.1.ipynb) for a quick example. 
+
+### Vignettes repository:
+- All vignettes can be found [here](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/vignettes/).
