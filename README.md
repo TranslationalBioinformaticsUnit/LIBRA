@@ -14,7 +14,6 @@ The Python package [sc-Libra](https://pypi.org/project/sc-libra/), has been deve
 - [Prerequisites](#prerequisites)
 - [Datasets](#datasets)
 - [Usage](#usage)
-- [Getting Started LIBRA](#getting-started-libra)
 - [Material of interest](#material-of-interest)
 
 # Summary
