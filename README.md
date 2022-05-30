@@ -54,16 +54,6 @@ Following datasets consist only on the sparse versions without cell/feature iden
 # Usage
 
 - Easiest way of running LIBRA analysis is though [sc-Libra](https://pypi.org/project/sc-libra/) python package. Package [documentation](https://sc-libra.readthedocs.io/en/latest/) is online available using "Read the Docs" platform.
-- 
-
-# Getting Started LIBRA
-
-### Basic vignettes:
-- Model training and integration/prediction [vignette](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/vignettes/Jupyter_notebook/LIBRA_main_pipeline_v1.0.1.ipynb) for a quick example. 
-- PPJI preservation metric computation [vignette](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/vignettes/Jupyter_notebook/LIBRA_ppji_metric_v1.0.1.ipynb) for a quick example. 
-
-### Vignettes repository:
-- All vignettes can be found [here](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/vignettes/).
 
 # Material of interest
 
