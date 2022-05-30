@@ -23,7 +23,7 @@ As a result from these raw developer-codes provided, [sc-Libra](https://pypi.org
 
 For further details, please refer to the [online manuscript](https://www.biorxiv.org/content/10.1101/2021.01.27.428400v1) currently at biorxiv repository (will be updated asap).
 
-# Prerequisites
+# Installation
  
 To run sc-Libra pipeline the following settings are required:
 - Install Python **>=3.7.0**.
