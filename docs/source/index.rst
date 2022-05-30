@@ -25,11 +25,11 @@ Please cite `this paper <https://www.biorxiv.org/content/10.1101/2021.01.27.4284
    :maxdepth: 1
    :caption: Resources
 
-   R scripts <https://github.com/TranslationalBioinformaticsUnit/LIBRA/tree/main/R>
-   Python scripts <https://github.com/TranslationalBioinformaticsUnit/LIBRA/tree/main/Python>
+   R scripts <https://github.com/TranslationalBioinformaticsUnit/LIBRA/tree/main/code_snapshots/R>
+   Python scripts <https://github.com/TranslationalBioinformaticsUnit/LIBRA/tree/main/code_snapshots/Python>
 
 .. toctree::
    :maxdepth: 1
    :caption: Notebooks
 
-   Vignettes <https://github.com/TranslationalBioinformaticsUnit/LIBRA/tree/main/vignettes>
+   Vignettes <https://github.com/TranslationalBioinformaticsUnit/LIBRA/tree/main/code_snapshots/vignettes>
