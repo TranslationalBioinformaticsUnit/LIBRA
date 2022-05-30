@@ -3,10 +3,10 @@ Tutorial
 
 LIBRA provides four main functions that cover all required aspects of the proposed pipeline.
 
-- 1.: :ref:`Loading input data`
-- 2.: :ref:`Training LIBRA model`
-- 3.: :ref:`Prediction using LIBRA model`
-- 4.: :ref:`Metrics computation`
+- :ref:`Loading input data`
+- :ref:`Training LIBRA model`
+- :ref:`Prediction using LIBRA model`
+- :ref:`Metrics computation`
 
 Getting started
 ------------
