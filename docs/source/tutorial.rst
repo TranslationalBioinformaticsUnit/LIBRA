@@ -139,7 +139,7 @@ Setting the metric parameter as *nn_mse* will predict overall present models sto
     
     output_metris=sc_libra.libra_metrics(output_data, metric='nn_mse', path_to_libra_outputs='/...LIBRA_outputs/Models/')
 
-- **Example (ppji)**:
+- **ppji:**
 
 Finally PPJI metric can be computed against the reference obtained clustering of either omics to measure how preserved is the biological information in clusters in the integrated latent space obtained in LIBRA model. To include this reference clustering information *cluster_origin* parameter is used. To feed this parameter information "cluster_origin=adata.obs['leiden']" serves as example of expected input format. **We strongly recommend to compute reference clusterings using *leiden* algorithm as it has proved to provide good results and to exclude divergences in clusters due to different algorithms used and not because of the model performance (LIBRA use *leiden* and the method for latent clustering computation).** As before *libra_output* can be used to specify the name of a model to compute it only for the desired model. Outputs will be saved after function ends.
 
