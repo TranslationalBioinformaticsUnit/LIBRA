@@ -61,9 +61,9 @@ Following datasets consist only on the sparse versions without cell/feature iden
 ### LIBRA benchmarking comparison:
 For validating LIBRA performance we compared it against other:
 
-- Integration performance compared to - non-published/available: [Seurat4](https://github.com/satijalab/seurat).
+- Integration performance compared to - published/available: [BABEL](https://github.com/wukevin/babel).
 
-- Prediction performance compared to - published/available: [Seurat3](https://satijalab.org/seurat/articles/integration_mapping.html), [MOFA+](https://biofam.github.io/MOFA2/index.html), [totalVI](https://github.com/YosefLab/scvi-tools), [BABEL](https://github.com/wukevin/babel).
+- Prediction performance compared to - published/available: [Seurat3](https://satijalab.org/seurat/articles/integration_mapping.html), [Seurat4](https://github.com/satijalab/seurat), [MOFA+](https://biofam.github.io/MOFA2/index.html), [totalVI](https://github.com/YosefLab/scvi-tools) and [BABEL](https://github.com/wukevin/babel).
 
 **Further details are provided at supplementary material added at [LIBRA manuscript](https://www.biorxiv.org/content/10.1101/2021.01.27.428400v1).**
 
