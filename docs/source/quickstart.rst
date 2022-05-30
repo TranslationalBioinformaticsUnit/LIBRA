@@ -8,7 +8,7 @@ Follow this steps to a proper installation:
 
 #. Install Python **>=3.7.0**.
 #. Install R **>=3.5.2**.
-#. Install `sc_libra <https://pypi.org/manage/project/sc-libra/releases/>`_ Python package.
+#. Install `sc_libra <https://pypi.org/project/sc-libra/>`_ Python package.
 #. **OPTIONAL: Prepare the environment (Only for selecting a specific R version in case many are installed, otherwise avoid this step)**.
 #. Importing sc_libra.
 
