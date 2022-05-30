@@ -33,6 +33,7 @@ To run sc-Libra pipeline the following settings are required:
       ```
       $ pip install sc_libra
       ```
+For stepwise guide follow the online [documentation](https://sc-libra.readthedocs.io/en/latest/).
 
 # Datasets  
 Find [Neurips](https://openproblems.bio/neurips_2021/) provided dataset for LIBRA testing at figsahre repository to be downloaded [here](https://figshare.com/s/d7ad0c6b8285e75de40f). 
