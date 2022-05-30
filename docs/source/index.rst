@@ -8,7 +8,7 @@ LIBRA has been designed using TensorFlow, any system that supports it is compati
 
 We encourage users and developers to report problems, request
 features, ask for help, or leave general comments on `GitHub <https://github.com/TranslationalBioinformaticsUnit/LIBRA>`_.
-Please refer to our `usage guide <https://sc-libra.readthedocs.io/en/latest/index.html >`_ if you wish to extend LIBRA's functionality and/or contribute to the project.
+Please refer to our `usage guide <https://sc-libra.readthedocs.io/en/latest/index.html>`_ if you wish to extend LIBRA's functionality and/or contribute to the project.
 
 LIBRA is distributed under the open source `GNU General Public License v3.0
 <https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/LICENSE>`_.
