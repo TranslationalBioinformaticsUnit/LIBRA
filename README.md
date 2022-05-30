@@ -68,3 +68,4 @@ For validating LIBRA performance we compared it against other:
 
 ### LIBRA visual workflow:
 ![workflow.png](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/gaf/figures/how_to.png)
+
