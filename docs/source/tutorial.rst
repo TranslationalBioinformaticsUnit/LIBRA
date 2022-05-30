@@ -11,53 +11,50 @@ LIBRA provides four main functions that cover all required aspects of the propos
 Getting started
 ------------
 
-First dependencies should be loaded by setting R path and then importing *sc_libra* module (at this moment rest of the required dependencies will also be loaded). In order to have an ordered working directory is recommended to set the directory path desired where the tree of folders and files will be saved during the execution of the different functions. The tree of folders will be generated under working directory path automatically.LIBRA_outputs will be generated as the root folder and inside an additional three directories will be generated for storaging different ouptputs: Integration, Models and supp_Models.
+In order to have an ordered working directory is recommended to set the directory path desired where the tree of folders and files will be saved during the execution of the different functions. The tree of folders will be generated under working directory path automatically. LIBRA_outputs will be generated as the root folder and inside an additional three directories will be generated to store different outputs: *Integration*, *Models* and *supp_Models*.
 
 .. code-block:: python
 
-    import os
-    os.environ['R_HOME'] = "/opt/R/3.5.2/lib64/R/"
     import sc_libra
     os.chdir("/desired_working_directory_path")
 
 .. _Loading input data:
-Loading input data 
+1. Loading input data 
 ------------------
 
 A universal loading data is provided for easy data loading into Python environment. Input file formats will be automatically detected among: **AnnData(".h5ad"), sparse matrix(".mtx",".txt"), comma separated matrix(.csv), 10XGenomics(.mtx folder) and 10XGenomics(.h5 file)**. If the format is different data should be loaded by the user with the corresponding command and harmonized as this function does. 
 
-In order dataset1 is the input modality to LIBRA model and dataset2 the output modality. **We strongly recommend to set RNA as the second modality**. By now only specific actions are performed over RNA omic so it is **important to set "RNA" name to RNA omic input dataset**, in other cases desired name can be used. If both input datasets are in working directory path, no paths are required by *load_data* function.
+In order dataset1 is the input modality to LIBRA model and dataset2 the output modality. **We strongly recommend to set RNA as the second modality**. By now specific actions are performed over RNA omic (feature space filtering to top 2000 most variable) so it is **important to set "RNA" name to RNA omic input dataset**, in other cases the desired name can be used. If both input datasets are in working directory path, no paths are required by *load_data* function.
 
-**Example (input files are in working directory)**:
+**- Input files are in working directory:**
 
 .. code-block:: python
 
     par = sc_libra.load_data("ATAC","RNA", dataset1='example_dataset1_atac.h5ad', dataset2='example_dataset2_rna.h5ad')
     
-If input datasets are in a different location than working directory, *dataset1_path* and *dataset2_path* can be used (*dataset2_path* will be equal to dataset1_path if not setted).
+**- Input files are in another directory than working directory):**
 
-**Example (input files are in another directory than working directory)**:
+If input datasets are in a different location than working directory, *dataset1_path* and *dataset2_path* can be used (*dataset2_path* will be equal to dataset1_path if not setted).
 
 .. code-block:: python
 
     par = sc_libra.load_data("ATAC","RNA", dataset1_path='/both_are_in_this_different_location', dataset1='example_dataset1_atac', dataset2='example_dataset2_rna.h5ad')
 
-If 10X folder contains the input data desired, specify only the path where files are and they will be automatically loaded.
+**- 10X folder as input:**
 
-**Example (10X folder as input)**:
+If 10X folder contains the input data desired, specify only the path where files are and they will be automatically loaded.
 
 .. code-block:: python
 
     par = sc_libra.load_data("ATAC","RNA", dataset1_path='/location_to_10x_folder_for_input_omic_ATAC', dataset2_path='/location_to_10x_folder_for_output_omic_RNA')
 
-Output format for downstream analysis
-------------------
+**Output format for downstream analysis**
 As a result output (*par* in these examples) will contain a dictionary such as:
 
    - {**omic_1_name**: pandas.dataframe.omic1, **omic_2_name**: pandas.dataframe.omic2}.
 
 .. _Training LIBRA model:
-Training LIBRA model
+2. Training LIBRA model
 --------------------
 
 LIBRA can run in many different ways using the *libra* function. This step uses the previously generated dictionary as input (in this example, *par*), if you want to run *libra* as part of an existing pipeline a dictionary with the above structure can be created by the user for the compatibility with the following functions. 
@@ -103,7 +100,7 @@ For bosting speed (if user hardware is sufficient) and extra parameter can be ad
 All these parameters can be combined for desired task.
 
 .. _Prediction using LIBRA model:
-Prediction using LIBRA model
+3. Prediction using LIBRA model
 ----------------------------
 
 If user want to use LIBRA model generated for a prediction task over same or new input dataset, it can be done through this function, *libra_predict* as following example. Either latent of output spaces can be predicted.
@@ -119,7 +116,7 @@ If user want to use LIBRA model generated for a prediction task over same or new
     predicted_data = sc_libra.libra_predict(model, input_data, to_predict)
 
 .. _Metrics computation:
-Metrics computation
+4. Metrics computation
 -------------------
 LIBRA provides a function *libra_metrics* to compute three different measurements explained on the paper.
 
