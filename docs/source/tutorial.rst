@@ -3,8 +3,6 @@ Tutorial
 
 LIBRA provides four main functions that cover all required aspects of the proposed pipeline.
 
-:ref:`RST Overview`
-
 - 1.: :ref:`Loading input data`
 - 2.: :ref:`Training LIBRA model`
 - 3.: :ref:`Prediction using LIBRA model`
@@ -149,9 +147,3 @@ Finally PPJI metric can be computed against the reference obtained clustering of
     
     output_metris=sc_libra.libra_metrics(output_data, cluster_origin=your_reference_cluster, metric='ppji', path_to_libra_outputs='/...LIBRA_outputs/Integration/')
     
-
-.. _RST Overview:
-
-
-
-
