@@ -4,7 +4,6 @@ Tutorial
 LIBRA provides four main functions that cover all required aspects of the proposed pipeline.
 
 
-
 Getting started
 ------------
 
