@@ -53,7 +53,8 @@ Following datasets consist only on the sparse versions without cell/feature iden
 
 # Usage
 
-- Easiest way of running LIBRA analysis is though [sc-Libra](https://pypi.org/project/sc-libra/) python package. Package [documentation](https://sc-libra.readthedocs.io/en/latest/) is online available using "Read the Docs" platform.
+- Easiest way of running LIBRA analysis is though [sc-Libra](https://pypi.org/project/sc-libra/) python package. 
+- Package [documentation](https://sc-libra.readthedocs.io/en/latest/) is online available using "Read the Docs" platform.
 
 # Material of interest
 
