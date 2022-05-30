@@ -35,16 +35,18 @@ LIBRA makes use of rpy2 for running some specific R functions. In order to impor
     $ #Typical locations are: 
     $ # export LD_LIBRARY_PATH="/opt/R/3.5.2/lib64/R/lib:$LD_LIBRARY_PATH" (if local installation of R was done) 
     $ # export LD_LIBRARY_PATH="/usr/lib64/R/:$LD_LIBRARY_PATH" (if global installaltion of R was done)
+    
     $ export LD_LIBRARY_PATH="/YOUR_PATH_TO_R_LIBS_HERE:$LD_LIBRARY_PATH"
 
 2. Open your Python environment and run:
 
 .. code-block:: bash
 
-    $ import os**
+    $ import os
     $ # Typical locations are:
     $ # export os.environ['R_HOME'] = "/opt/R/3.5.2/lib64/R/" (if local installation of R was done)
     $ # export os.environ['R_HOME'] = "/usr/lib64/R/" (if global installaltion of R was done)
+    
     $ os.environ['R_HOME'] = "/YOUR_POATH_TO_R_HERE"
 
 Through these two steps possible miss-making errors because incorrect R version pointed can be evaded (often if more than one R version is installed).
