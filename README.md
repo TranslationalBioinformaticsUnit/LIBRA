@@ -11,7 +11,7 @@ This repository contains the [LIBRA code](https://github.com/TranslationalBioinf
 The Python package [sc-Libra](https://pypi.org/project/sc-libra/), has been developed with the aim of extending and summarizing the developer code used on the paper to a user-friendly version and is freely available in the PyPI repository. Read online package [documentation](https://sc-libra.readthedocs.io/en/latest/) for detailled description and guidelines.
 
 - [Summary](#summary)
-- [Prerequisites](#prerequisites)
+- [Installation](#installation)
 - [Datasets](#datasets)
 - [Usage](#usage)
 - [Material of interest](#material-of-interest)
