@@ -8,7 +8,7 @@ Single-Cell Multi-Omics Data
 ===========
 This repository contains the [LIBRA code](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/R/LIBRA_code/) and [online data](#datasets) used for Single-cell multi-omics integration and prediction analysis employed on [LIBRA manuscript](https://www.biorxiv.org/content/10.1101/2021.01.27.428400v1). [Libra metrics](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/R/LIBRA_code/) are also available for quantifying outputs quality as well as novel PPJI preservation measurement. [Seurat code](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/R/Seurat_code/) employed to analyze LIBRA input omics as well as for clustering and visualization pipelines are providen. 
 
-The Python package [sc-Libra](https://pypi.org/project/sc-libra/) ,has been developed with the aim of extending and summarizing the developer code to a user-friendly version and is freely available in the PyPI repository. Read online package [documentation](https://sc-libra.readthedocs.io/en/latest/).
+The Python package [sc-Libra](https://pypi.org/project/sc-libra/), has been developed with the aim of extending and summarizing the developer code to a user-friendly version and is freely available in the PyPI repository. Read online package [documentation](https://sc-libra.readthedocs.io/en/latest/).
 
 - [Summary](#summary)
 - [Prerequisites](#prerequisites)
