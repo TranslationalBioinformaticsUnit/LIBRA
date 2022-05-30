@@ -48,5 +48,3 @@ LIBRA makes use of rpy2 for running some specific R functions. In order to impor
     $ # export os.environ['R_HOME'] = "/usr/lib64/R/" (if global installation of R was done)
     
     $ os.environ['R_HOME'] = "/YOUR_POATH_TO_R_HERE"
-
-Through these two steps possible miss-making errors because incorrect R version pointed can be evaded (often if more than one R version is installed).
