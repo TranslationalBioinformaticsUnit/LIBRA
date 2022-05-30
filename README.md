@@ -27,8 +27,12 @@ For further details, please refer to the [online manuscript](https://www.biorxiv
 # Prerequisites
  
 To run sc-Libra pipeline the following settings are required:
-
-
+- Install Python **>=3.7.0**.
+- Install R **>=3.5.2**.
+- Install sc-libra python package:
+      ```
+      $ pip install sc_libra
+      ```
 
 # Datasets  
 Find [Neurips](https://openproblems.bio/neurips_2021/) provided dataset for LIBRA testing at figsahre repository to be downloaded [here](https://figshare.com/s/d7ad0c6b8285e75de40f). 
