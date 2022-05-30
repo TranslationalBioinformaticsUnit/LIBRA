@@ -1,4 +1,4 @@
-# Prerequisites for running manuscript codes
+# Prerequisites (for running manuscript codes)
  
 To run LIBRA pipeline form R or Python source code or any other metric generated in the manuscript the following environmental settings are required:
 
@@ -15,7 +15,7 @@ To run LIBRA fine-tune pipeline generated in the manuscript the following enviro
 ### Versatility:
 > **LIBRA manuscript code was develop in R but feel free to use "rpy2" Python library (https://rpy2.github.io/) for running LIBRA on R snippet through Python console otherwise if your preprocessing was performed using Python but you are interested in running libra in its R implementation you are able to move it to R by using "reticulate" package (https://rstudio.github.io/reticulate/).**
 
-# Manuscript codes usage
+# Usage (manuscript codes)
 
 - **LIBRA pipeline is made easy** to be run especially for any Seurat package user. 
 - The code is executed/stored in **Seurat R objects**, this allows the user to **benefit from the long ecosystem of functions and structures present in Seurat**. 
@@ -23,7 +23,7 @@ To run LIBRA fine-tune pipeline generated in the manuscript the following enviro
 - The **valid input for LIBRA** is any pair of omic matrices assigning the cell information in the rows and the feature information in the columns.
 - Easiest way of running LIBRA analysis is though [sc-Libra](https://pypi.org/project/sc-libra/) python package. Package [documentation](https://sc-libra.readthedocs.io/en/latest/) is online available using "Read the Docs" platform.
 
-# Getting Started with LIBRA manuscript code used
+# Getting Started with LIBRA (manuscript codes)
 
 ### Basic vignettes:
 - Model training and integration/prediction [vignette](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/code_snapshots/vignettes/Jupyter_notebook/LIBRA_main_pipeline_v1.0.1.ipynb) for a quick example. 
