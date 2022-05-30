@@ -53,11 +53,8 @@ Following datasets consist only on the sparse versions without cell/feature iden
 
 # Usage
 
-- **LIBRA pipeline is made easy** to be run especially for any Seurat package user. 
-- The code is executed/stored in **Seurat R objects**, this allows the user to **benefit from the long ecosystem of functions and structures present in Seurat**. 
-- Either **Seurat3** in R 3.X.X environment or **Seurat4** in R 4.X.X environment can be used **by hand of LIBRA**.
-- The **valid input for LIBRA** is any pair of omic matrices assigning the cell information in the rows and the feature information in the columns.
 - Easiest way of running LIBRA analysis is though [sc-Libra](https://pypi.org/project/sc-libra/) python package. Package [documentation](https://sc-libra.readthedocs.io/en/latest/) is online available using "Read the Docs" platform.
+- 
 
 # Getting Started LIBRA
 
