@@ -3,6 +3,8 @@ Tutorial
 
 LIBRA provides four main functions that cover all required aspects of the proposed pipeline.
 
+:ref:`RST Overview`
+
 - 1.: :ref:`Loading input data`
 - 2.: :ref:`Training LIBRA model`
 - 3.: :ref:`Prediction using LIBRA model`
@@ -19,6 +21,7 @@ In order to have an ordered working directory is recommended to set the director
     os.chdir("/desired_working_directory_path")
 
 .. _Loading input data:
+
 1. Loading input data 
 ------------------
 
@@ -54,6 +57,7 @@ As a result output (*par* in these examples) will contain a dictionary such as:
    - {**omic_1_name**: pandas.dataframe.omic1, **omic_2_name**: pandas.dataframe.omic2}.
 
 .. _Training LIBRA model:
+
 2. Training LIBRA model
 --------------------
 
@@ -100,6 +104,7 @@ For bosting speed (if user hardware is sufficient) and extra parameter can be ad
 All these parameters can be combined for desired task.
 
 .. _Prediction using LIBRA model:
+
 3. Prediction using LIBRA model
 ----------------------------
 
@@ -114,6 +119,7 @@ If user wants to use LIBRA model generated for a prediction task over same or ne
     predicted_data = sc_libra.libra_predict(model, input_data, to_predict)
 
 .. _Metrics computation:
+
 4. Metrics computation
 -------------------
 LIBRA provides a function *libra_metrics* to compute three different measurements explained on the paper.
