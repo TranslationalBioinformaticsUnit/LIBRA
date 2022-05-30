@@ -18,7 +18,7 @@ This repository contains the [LIBRA code](https://github.com/TranslationalBioinf
 # Summary
 LIBRA is a deep learning model that is designed for Single-cell multi-omics integration and prediction. LIBRA performs this by using an unbalance Autoencoder which learns a shared low-dimensional embedding from both experiment omics, combining each sample's uniqueness for generating a enriched representation of integrated data respect to the original experiment independent data. This tool has been first developed in [R code](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/R/LIBRA_code/), a code snapshot is providen for R users. Next, adaptative LIBRA (aLIBRA) tool has been develop for paralellize training of LIBRA models using a grid structure for selecting optimal hyperparameters in a automatic way excluding the requirement of doing this by users saving considerable time. Snapshot code is providen in [Python code](https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/Python/LIBRA_fine_tune_code/) for conceptual understanding.
 
-As a result from these developer-codes [sc-Libra](https://pypi.org/project/sc-libra/) package was developed to expand framework utilities and provide a user friendly version for users.
+As a result from these developer-codes provided, [sc-Libra](https://pypi.org/project/sc-libra/) package was developed to expand framework utilities and provide a user friendly version for users.
 
 For further details, please refer to the [online manuscript](https://www.biorxiv.org/content/10.1101/2021.01.27.428400v1) currently at biorxiv repository (will be updated asap).
 
