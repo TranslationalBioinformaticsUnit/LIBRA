@@ -3,26 +3,10 @@ Tutorial
 
 LIBRA provides four main functions that cover all required aspects of the proposed pipeline.
 
-
-.. _RST Overview:
-
-Overview
-**********
-
-RST Overview content
-
-
-.. _Sphinx Overview:
-
-Overview
-*********
-
-Sphinx Overview content
-
-
-This is a link to the RST Overview: :ref:`RST Overview`
-
-This is a link to the Sphinx Overview: :ref:`Sphinx Overview`
+- 1.: :ref:`Loading input data`
+- 2.: :ref:`Training LIBRA model`
+- 3.: :ref:`Prediction using LIBRA model`
+- 4.: :ref:`Metrics computation`
 
 Getting started
 ------------
@@ -36,7 +20,7 @@ First dependencies should be loaded by setting R path and then importing *sc_lib
     import sc_libra
     os.chdir("/desired_working_directory_path")
 
-
+.. _Loading input data:
 Loading input data 
 ------------------
 
@@ -72,6 +56,7 @@ As a result output (*par* in these examples) will contain a dictionary such as:
 
    - {**omic_1_name**: pandas.dataframe.omic1, **omic_2_name**: pandas.dataframe.omic2}.
 
+.. _Training LIBRA model:
 Training LIBRA model
 --------------------
 
@@ -117,7 +102,7 @@ For bosting speed (if user hardware is sufficient) and extra parameter can be ad
 
 All these parameters can be combined for desired task.
 
-
+.. _Prediction using LIBRA model:
 Prediction using LIBRA model
 ----------------------------
 
@@ -133,6 +118,7 @@ If user want to use LIBRA model generated for a prediction task over same or new
     
     predicted_data = sc_libra.libra_predict(model, input_data, to_predict)
 
+.. _Metrics computation:
 Metrics computation
 -------------------
 LIBRA provides a function *libra_metrics* to compute three different measurements explained on the paper.
