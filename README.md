@@ -21,7 +21,7 @@ LIBRA is a deep learning model that is designed for Single-cell multi-omics inte
 
 As a result from these raw developer-codes provided, [sc-Libra](https://pypi.org/project/sc-libra/) package is provided as a built-in resource to perform the pipeline propossed.
 
-For further details, please refer to the [online manuscript](https://www.biorxiv.org/content/10.1101/2021.01.27.428400v1) currently at biorxiv repository (will be updated asap).
+For further details, please refer to the [online manuscript](https://www.biorxiv.org/content/10.1101/2021.01.27.428400v2) currently at biorxiv repository (will be updated asap).
 
 # Installation
  
