@@ -12,7 +12,7 @@ Please refer to our `usage guide <https://sc-libra.readthedocs.io/en/latest/inde
 
 LIBRA is distributed under the open source `GNU General Public License v3.0
 <https://github.com/TranslationalBioinformaticsUnit/LIBRA/blob/main/LICENSE>`_.
-Please cite `this paper <https://www.biorxiv.org/content/10.1101/2021.01.27.428400v1>`_ if you publish work using LIBRA:
+Please cite `this paper <https://www.biorxiv.org/content/10.1101/2021.01.27.428400v2>`_ if you publish work using LIBRA:
 
 .. toctree::
    :maxdepth: 1
