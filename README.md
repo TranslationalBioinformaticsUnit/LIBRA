@@ -63,7 +63,7 @@ For validating LIBRA performance we compared it against other:
 
 - Integration performance compared to - published/available: [BABEL](https://github.com/wukevin/babel).
 
-- Prediction performance compared to - published/available: [Seurat3](https://satijalab.org/seurat/articles/integration_mapping.html), [Seurat4](https://github.com/satijalab/seurat), [MOFA+](https://biofam.github.io/MOFA2/index.html), [totalVI](https://github.com/YosefLab/scvi-tools) and [BABEL](https://github.com/wukevin/babel).
+- Prediction performance compared to - published/available: [Seurat3](https://satijalab.org/seurat/articles/integration_mapping.html), [Seurat4](https://github.com/satijalab/seurat), [MOFA+](https://biofam.github.io/MOFA2/index.html), [totalVI](https://github.com/YosefLab/scvi-tools), [BABEL](https://github.com/wukevin/babel), multiVI(https://github.com/scverse/scvi-tutorials/blob/master/MultiVI_tutorial.ipynb) and multigrate(https://github.com/theislab/multigrate).
 
 **Further details are provided at supplementary material added at [LIBRA manuscript](https://www.biorxiv.org/content/10.1101/2021.01.27.428400v1).**
 
